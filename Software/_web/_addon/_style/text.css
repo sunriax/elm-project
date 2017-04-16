@@ -1,0 +1,62 @@
+				h1	{
+										display: block;
+									font-size: 40px;
+								font-family: verdana;
+											color: #ff9900;
+							 margin-right: 10px;
+							margin-bottom: 0px;
+						}
+				h2	{
+									display: block;
+								font-size: 20px;
+							font-family: verdana;
+										color: #6a6a6a;
+						 margin-right: 10px;
+							 margin-top: 0px;
+						}
+				div.menu	{
+										font-size: 15px;
+									 text-align: center;
+									font-family: Verdana, Impact;
+												color: #6a6a6a;
+									}
+	@media screen and (min-width: 1120px) {
+				div.menu	{
+										font-size: 20px;
+									 text-align: center;
+									font-family: Verdana, Impact;
+												color: #6a6a6a;
+									}
+	}
+	@media screen and (min-width: 1320px) {
+				div.menu	{
+										font-size: 22px;
+									 text-align: center;
+									font-family: Verdana, Impact;
+												color: #6a6a6a;
+									}
+	}
+
+				div.text	{
+										font-size: 13px;
+									font-family: Verdana, Impact;
+												color: #000000;
+									}
+				
+				#red	{
+							color: red;
+							}
+				
+				div.copyright	{
+												font-size: 13px;
+											font-family: Verdana, Impact;
+														color: #000000;
+											}
+
+				div.upload	{
+										display: inline;
+				}
+
+				div.image	{
+									display: inline-block;
+				}

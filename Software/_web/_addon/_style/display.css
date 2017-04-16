@@ -1,0 +1,36 @@
+﻿				td.displaycontent	{
+																 width: 45%;
+																border: 2px dashed #6a6a6a;
+											background-color: #ffffff;
+											}
+				td.displaycontent#head1	{	
+															 background-image: url('../_image/display.png');
+															background-repeat: no-repeat;
+											  	 			background-size: 7%;
+														background-position: left center;
+																				 height: 15%;
+																		 min-height: 40px;
+															 background-color: #cacaca;
+														}
+				td.displaycontent#head2	{	
+															 background-image: url('../_image/music.png');
+															background-repeat: no-repeat;
+											  	 			background-size: 7%;
+														background-position: left center;
+																				 height: 15%;
+																		 min-height: 40px;
+															 background-color: #cacaca;
+														}
+				td.displaycontent#text	{	
+																			height: 85%;
+															vertical-align: top;
+														background-color: #ffffff;
+														}
+				td.displaycontent#login	{	
+															 background-image: url('../_image/login.png');
+															background-repeat: no-repeat;
+											  	 			background-size: 13%;
+														background-position: left center;
+																				 height: 15%;
+															 background-color: #cacaca;
+														}

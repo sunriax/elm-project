@@ -1,0 +1,35 @@
+				select	{
+								width: 250px;
+								height: 30px;
+								border: 2px dashed #cacaca;
+								background-color: #fafafa;
+								}
+				input[type=submit],[type=button]	{
+																					width: 100px;
+																					height: 30px;
+																					border-top: 2px dashed #aaaaaa;
+																					border-left: 2px dashed #aaaaaa;
+																					border-right: 2px dashed #6a6a6a;
+																					border-bottom: 2px dashed #6a6a6a;
+																					background-color: #cacaca;
+																					}
+				input[type=text],[type=password]	{
+																					width: 200px;
+																					height: 20px;
+																					border: 1px dashed #6a6a6a;
+																					background-color: #ffffff;
+																					}
+
+
+
+				input[type=file]	{
+													border: 1px solid #6a6a6a;
+													width:300px;
+													height: 25px;
+													background-color: #ffffff;
+				}
+
+				#small	{
+								width: 30px;
+								height: 20px;
+				}

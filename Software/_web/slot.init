@@ -1,0 +1,9 @@
+//	+---------------------------+
+//	|	elmProject v1.0						|
+//	|	OpenSource GPL/LGPL v3.0	|
+//	+---------------------------+
+//	Slot,	Text, Identification, Version, Status, Adresse, Console
+1|VGA/Sound|vgasnd|1.0|1|0xE1|/dev/i2c0|/dev/i2s0|
+2|Analog|analog|1.0|1|0x0F|/dev/ttyS0|
+3|Expansion|test|1.0|1|0xF4|/dev/ttyS0|
+4||false|false|false|false|false|
