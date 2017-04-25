@@ -1,0 +1,16 @@
+0.6
+2017.1
+Apr 14 2017
+19:10:27
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.ip_user_files/bd/clock_bd/hdl/clock_bd.vhd,1492854446,vhdl,,,,clock_bd,,,,,,,,
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.ip_user_files/bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0.v,1492854447,verilog,,,,clock_bd_clk_wiz_0_0,,,../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4;../../../LogiX.srcs/sources_1/bd/vga_bd/ipshared/65a4,,,,,
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.ip_user_files/bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0_clk_wiz.v,1492854447,verilog,,,,clock_bd_clk_wiz_0_0_clk_wiz,,,../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4;../../../LogiX.srcs/sources_1/bd/vga_bd/ipshared/65a4,,,,,
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.ip_user_files/bd/vga_bd/hdl/vga_bd.vhd,1493033692,vhdl,,,,vga_bd,,,,,,,,
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.ip_user_files/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0.v,1493022464,verilog,,,,vga_bd_clk_wiz_0_0,,,../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4;../../../LogiX.srcs/sources_1/bd/vga_bd/ipshared/65a4,,,,,
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.ip_user_files/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0_clk_wiz.v,1493022464,verilog,,,,vga_bd_clk_wiz_0_0_clk_wiz,,,../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4;../../../LogiX.srcs/sources_1/bd/vga_bd/ipshared/65a4,,,,,
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.sim/sim_1/behav/glbl.v,1492045073,verilog,,,,glbl,,,,,,,,
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sim_1/new/master_tb.vhd,1493106832,vhdl,,,,master_tb,,,,,,,,
+C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd,1493107677,vhdl,,,,master,,,,,,,,
+C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd,1493108029,vhdl,,,,display,,,,,,,,
+C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd,1493107926,vhdl,,,,pattern,,,,,,,,
+C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd,1493103245,vhdl,,,,vga,,,,,,,,

@@ -1,0 +1,4 @@
+verilog xil_defaultlib "../../../bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0_clk_wiz.v" --include "../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4"
+verilog xil_defaultlib "../../../bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0.v" --include "../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4"
+verilog xil_defaultlib "glbl.v"
+nosort

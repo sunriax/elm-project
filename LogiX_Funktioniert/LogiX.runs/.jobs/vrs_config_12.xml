@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="vga_bd_clk_wiz_0_0_synth_1" LaunchDir="C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.runs/vga_bd_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vga_bd_display_0_0_synth_1" LaunchDir="C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.runs/vga_bd_display_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="vga_bd_clk_wiz_0_0_synth_1"/>
+		<Parent Id="vga_bd_display_0_0_synth_1"/>
+	</Run>
+</Runs>
+

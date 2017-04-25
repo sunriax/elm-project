@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../LogiX.ip_user_files/bd/vga_bd/hdl/vga_bd.vhd"
+vhdl xil_defaultlib  "../../../LogiX.ip_user_files/bd/clock_bd/hdl/clock_bd.vhd"
+vhdl xil_defaultlib  "../../../../../source/_vhdl/source/display.vhd"
+vhdl xil_defaultlib  "../../../LogiX.srcs/sources_1/new/master.vhd"
+vhdl xil_defaultlib  "../../../../../source/_vhdl/source/pattern.vhd"
+vhdl xil_defaultlib  "../../../../../source/_vhdl/source/vga.vhd"
+vhdl xil_defaultlib  "../../../LogiX.srcs/sim_1/new/master_tb.vhd"
+
+# Do not sort compile order
+nosort

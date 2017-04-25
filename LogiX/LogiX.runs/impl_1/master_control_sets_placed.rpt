@@ -1,0 +1,76 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date         : Tue Apr 25 11:38:02 2017
+| Host         : LAPTOP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file master_control_sets_placed.rpt
+| Design       : master
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    53 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              15 |            7 |
+| No           | No                    | Yes                    |             384 |          116 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               4 |            1 |
+| Yes          | No                    | Yes                    |              64 |           29 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------+------------------------------------------------+--------------------------------------------+------------------+----------------+
+|              Clock Signal              |                  Enable Signal                 |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
++----------------------------------------+------------------------------------------------+--------------------------------------------+------------------+----------------+
+|  Clock/clk_wiz_0/inst/sysCLK           | VGA_Pattern/intPATTERN[3]_i_1_n_0              |                                            |                1 |              4 |
+|  Clock/clk_wiz_0/inst/sysCLK           | VGA_Pattern/patternDATA_reg[3]_i_1_n_0         | VGA_Pattern/intnotEN                       |                1 |              4 |
+| ~Clock/clk_wiz_0/inst/sysCLK           | VGA_Pattern/intpixelDATA[11]_i_1_n_0           | VGA_Pattern/intnotEN                       |                5 |             12 |
+|  VGA_Clock/clk_wiz_0/inst/CLK1024x768  | VGA_Display/VGA1024x768/pixelY[11]_i_1__1_n_0  | VGA_Display/VGA1024x768/pixelXCNT_reg[0]_0 |                3 |             12 |
+|  VGA_Clock/clk_wiz_0/inst/CLK1280x1024 | VGA_Display/VGA1280x1024/pixelY[11]_i_1__2_n_0 | VGA_Display/VGA1280x1024/h_SYNC_i_2__0_n_0 |                7 |             12 |
+|  VGA_Clock/clk_wiz_0/inst/CLK640x480   | VGA_Display/VGA640x480/pixelY[11]_i_1_n_0      | VGA_Display/VGA640x480/h_SYNC_i_2_n_0      |                7 |             12 |
+|  VGA_Clock/clk_wiz_0/inst/CLK800x600   | VGA_Display/VGA800x600/pixelY[11]_i_1__0_n_0   | VGA_Display/VGA800x600/pixelXCNT_reg[0]_0  |                6 |             12 |
+|  VGA_Pattern/nCLK0                     |                                                |                                            |                7 |             15 |
+|  Clock/clk_wiz_0/inst/sysCLK           |                                                | VGA_Pattern/intnotEN                       |                8 |             32 |
+|  VGA_Clock/clk_wiz_0/inst/CLK640x480   |                                                | VGA_Display/VGA640x480/h_SYNC_i_2_n_0      |               23 |             82 |
+|  VGA_Clock/clk_wiz_0/inst/CLK1024x768  |                                                | VGA_Display/VGA1024x768/pixelXCNT_reg[0]_0 |               27 |             90 |
+|  VGA_Clock/clk_wiz_0/inst/CLK1280x1024 |                                                | VGA_Display/VGA1280x1024/h_SYNC_i_2__0_n_0 |               28 |             90 |
+|  VGA_Clock/clk_wiz_0/inst/CLK800x600   |                                                | VGA_Display/VGA800x600/pixelXCNT_reg[0]_0  |               30 |             90 |
++----------------------------------------+------------------------------------------------+--------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 4      |                     2 |
+| 12     |                     5 |
+| 15     |                     1 |
+| 16+    |                     5 |
++--------+-----------------------+
+
+
