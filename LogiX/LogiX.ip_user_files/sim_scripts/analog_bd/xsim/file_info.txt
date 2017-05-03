@@ -1,0 +1,2 @@
+analog_bd_xadc_wiz_0_0.vhd,vhdl,xil_defaultlib,../../../bd/analog_bd/ip/analog_bd_xadc_wiz_0_0/analog_bd_xadc_wiz_0_0.vhd,
+analog_bd.vhd,vhdl,xil_defaultlib,../../../bd/analog_bd/hdl/analog_bd.vhd,

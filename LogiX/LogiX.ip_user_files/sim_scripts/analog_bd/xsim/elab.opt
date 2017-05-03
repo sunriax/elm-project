@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L secureip -L xpm --snapshot analog_bd xil_defaultlib.analog_bd -log elaborate.log

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Tue Apr 25 11:43:59 2017
+| Date         : Mon May  1 23:14:12 2017
 | Host         : LAPTOP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file master_methodology_drc_routed.rpt -rpx master_methodology_drc_routed.rpx
 | Design       : master
@@ -23,17 +23,17 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 205
+             Violations found: 198
 +-----------+----------+--------------------------------------------------------+------------+
 | Rule      | Severity | Description                                            | Violations |
 +-----------+----------+--------------------------------------------------------+------------+
-| TIMING-6  | Warning  | No common primary clock between related clocks         | 26         |
-| TIMING-8  | Warning  | No common period between related clocks                | 32         |
-| TIMING-16 | Warning  | Large setup violation                                  | 100        |
+| TIMING-6  | Warning  | No common primary clock between related clocks         | 23         |
+| TIMING-8  | Warning  | No common period between related clocks                | 26         |
+| TIMING-16 | Warning  | Large setup violation                                  | 103        |
 | TIMING-18 | Warning  | Missing input or output delay                          | 30         |
-| TIMING-20 | Warning  | Non-clocked latch                                      | 15         |
 | XDCC-1    | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
 | XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
+| XDCH-2    | Warning  | Same min and max delay values on IO port               | 14         |
 +-----------+----------+--------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -50,120 +50,105 @@ Related violations: <none>
 
 TIMING-6#3 Warning
 No common primary clock between related clocks  
-The clocks CLK1024x768_vga_bd_clk_wiz_0_0_1 and CLK1024x768_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0_1] -to [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0]
+The clocks CLK1024x768_vga_bd_clk_wiz_0_0 and sys_clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0] -to [get_clocks sys_clk]
 Related violations: <none>
 
 TIMING-6#4 Warning
 No common primary clock between related clocks  
-The clocks CLK1024x768_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0_1] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0]
+The clocks CLK1024x768_vga_bd_clk_wiz_0_0_1 and CLK1024x768_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0_1] -to [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-6#5 Warning
 No common primary clock between related clocks  
-The clocks CLK1280x1024_vga_bd_clk_wiz_0_0 and CLK1280x1024_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0] -to [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1]
+The clocks CLK1024x768_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0_1] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-6#6 Warning
 No common primary clock between related clocks  
-The clocks CLK1280x1024_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1]
+The clocks CLK1280x1024_vga_bd_clk_wiz_0_0 and CLK1280x1024_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0] -to [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-6#7 Warning
 No common primary clock between related clocks  
-The clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1 and CLK1280x1024_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1] -to [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0]
+The clocks CLK1280x1024_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-6#8 Warning
 No common primary clock between related clocks  
-The clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0]
+The clocks CLK1280x1024_vga_bd_clk_wiz_0_0 and sys_clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0] -to [get_clocks sys_clk]
 Related violations: <none>
 
 TIMING-6#9 Warning
 No common primary clock between related clocks  
-The clocks CLK640x480_vga_bd_clk_wiz_0_0 and CLK640x480_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK640x480_vga_bd_clk_wiz_0_0] -to [get_clocks CLK640x480_vga_bd_clk_wiz_0_0_1]
+The clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1 and CLK1280x1024_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1] -to [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-6#10 Warning
 No common primary clock between related clocks  
-The clocks CLK640x480_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK640x480_vga_bd_clk_wiz_0_0] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1]
+The clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-6#11 Warning
 No common primary clock between related clocks  
-The clocks CLK640x480_vga_bd_clk_wiz_0_0_1 and CLK640x480_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK640x480_vga_bd_clk_wiz_0_0_1] -to [get_clocks CLK640x480_vga_bd_clk_wiz_0_0]
+The clocks CLK800x600_vga_bd_clk_wiz_0_0 and CLK800x600_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0] -to [get_clocks CLK800x600_vga_bd_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-6#12 Warning
 No common primary clock between related clocks  
-The clocks CLK640x480_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK640x480_vga_bd_clk_wiz_0_0_1] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0]
+The clocks CLK800x600_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-6#13 Warning
 No common primary clock between related clocks  
-The clocks CLK800x600_vga_bd_clk_wiz_0_0 and CLK800x600_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0] -to [get_clocks CLK800x600_vga_bd_clk_wiz_0_0_1]
+The clocks CLK800x600_vga_bd_clk_wiz_0_0 and sys_clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0] -to [get_clocks sys_clk]
 Related violations: <none>
 
 TIMING-6#14 Warning
 No common primary clock between related clocks  
-The clocks CLK800x600_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1]
+The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and CLK800x600_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0_1] -to [get_clocks CLK800x600_vga_bd_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-6#15 Warning
 No common primary clock between related clocks  
-The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and CLK800x600_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0_1] -to [get_clocks CLK800x600_vga_bd_clk_wiz_0_0]
+The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0_1] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-6#16 Warning
 No common primary clock between related clocks  
-The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks CLK800x600_vga_bd_clk_wiz_0_0_1] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0]
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1024x768_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-6#17 Warning
 No common primary clock between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1024x768_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0_1]
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1280x1024_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-6#18 Warning
 No common primary clock between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1280x1024_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0_1]
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK800x600_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks CLK800x600_vga_bd_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-6#19 Warning
 No common primary clock between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK640x480_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks CLK640x480_vga_bd_clk_wiz_0_0_1]
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-6#20 Warning
 No common primary clock between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK800x600_vga_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks CLK800x600_vga_bd_clk_wiz_0_0_1]
+The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1024x768_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1] -to [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-6#21 Warning
 No common primary clock between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1]
+The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1280x1024_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1] -to [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-6#22 Warning
 No common primary clock between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1024x768_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1] -to [get_clocks CLK1024x768_vga_bd_clk_wiz_0_0]
-Related violations: <none>
-
-TIMING-6#23 Warning
-No common primary clock between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1280x1024_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1] -to [get_clocks CLK1280x1024_vga_bd_clk_wiz_0_0]
-Related violations: <none>
-
-TIMING-6#24 Warning
-No common primary clock between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK640x480_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1] -to [get_clocks CLK640x480_vga_bd_clk_wiz_0_0]
-Related violations: <none>
-
-TIMING-6#25 Warning
-No common primary clock between related clocks  
 The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK800x600_vga_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1] -to [get_clocks CLK800x600_vga_bd_clk_wiz_0_0]
 Related violations: <none>
 
-TIMING-6#26 Warning
+TIMING-6#23 Warning
 No common primary clock between related clocks  
 The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks sysCLK_clock_bd_clk_wiz_0_0_1] -to [get_clocks sysCLK_clock_bd_clk_wiz_0_0]
 Related violations: <none>
@@ -210,622 +195,607 @@ Related violations: <none>
 
 TIMING-8#9 Warning
 No common period between related clocks  
-The clocks CLK640x480_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
+The clocks CLK800x600_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#10 Warning
 No common period between related clocks  
-The clocks CLK640x480_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
+The clocks CLK800x600_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#11 Warning
 No common period between related clocks  
-The clocks CLK640x480_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
+The clocks CLK800x600_vga_bd_clk_wiz_0_0 and sys_clk are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#12 Warning
 No common period between related clocks  
-The clocks CLK640x480_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
+The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#13 Warning
 No common period between related clocks  
-The clocks CLK800x600_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
+The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#14 Warning
 No common period between related clocks  
-The clocks CLK800x600_vga_bd_clk_wiz_0_0 and sysCLK_clock_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
+The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and sys_clk are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#15 Warning
 No common period between related clocks  
-The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1024x768_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#16 Warning
 No common period between related clocks  
-The clocks CLK800x600_vga_bd_clk_wiz_0_0_1 and sysCLK_clock_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1024x768_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#17 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1024x768_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1280x1024_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#18 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1024x768_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1280x1024_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#19 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1280x1024_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK800x600_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#20 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK1280x1024_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK800x600_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#21 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK640x480_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1024x768_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#22 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK640x480_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1024x768_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#23 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK800x600_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1280x1024_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#24 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0 and CLK800x600_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
+The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1280x1024_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-8#25 Warning
 No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1024x768_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
-Related violations: <none>
-
-TIMING-8#26 Warning
-No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1024x768_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
-Related violations: <none>
-
-TIMING-8#27 Warning
-No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1280x1024_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
-Related violations: <none>
-
-TIMING-8#28 Warning
-No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK1280x1024_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
-Related violations: <none>
-
-TIMING-8#29 Warning
-No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK640x480_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
-Related violations: <none>
-
-TIMING-8#30 Warning
-No common period between related clocks  
-The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK640x480_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
-Related violations: <none>
-
-TIMING-8#31 Warning
-No common period between related clocks  
 The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK800x600_vga_bd_clk_wiz_0_0 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
-TIMING-8#32 Warning
+TIMING-8#26 Warning
 No common period between related clocks  
 The clocks sysCLK_clock_bd_clk_wiz_0_0_1 and CLK800x600_vga_bd_clk_wiz_0_0_1 are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.324 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[9]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.968 ns between VGA_Display/VGA1024x768/intvgaB_reg[0]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and vgaB[0] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.376 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[6]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.992 ns between VGA_Display/VGA1280x1024/intvgaR_reg[3]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and vgaR[3] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.467 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[7]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.097 ns between VGA_Display/VGA1024x768/h_SYNC_reg/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and h_SYNC (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.474 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[10]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.108 ns between VGA_Display/VGA1024x768/intvgaG_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and vgaG[3] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.511 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[8]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.156 ns between VGA_Display/VGA1280x1024/intvgaG_reg[0]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and vgaG[0] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.520 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[11]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.168 ns between VGA_Display/VGA1280x1024/intvgaR_reg[2]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and vgaR[2] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -1.596 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[4]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.180 ns between VGA_Display/VGA1024x768/intvgaB_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and vgaB[3] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -1.637 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[1]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.205 ns between VGA_Display/VGA1280x1024/intvgaR_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and vgaR[1] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -1.640 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[11]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.206 ns between VGA_Display/VGA1024x768/v_SYNC_reg/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and v_SYNC (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -1.642 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[10]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.211 ns between VGA_Display/VGA1024x768/intvgaG_reg[1]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and vgaG[1] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -1.656 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[2]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.228 ns between VGA_Display/VGA1024x768/intvgaB_reg[1]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and vgaB[1] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -1.685 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[8]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.273 ns between VGA_Display/VGA1280x1024/intvgaR_reg[0]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and vgaR[0] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -1.692 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[0]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.317 ns between VGA_Display/VGA1024x768/intvgaB_reg[2]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and vgaB[2] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -1.694 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[6]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.398 ns between VGA_Display/VGA1024x768/intvgaG_reg[2]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and vgaG[2] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -1.697 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[1]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.023 ns between VGA_Pattern/intpixelDATA_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaR_reg[2]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -1.698 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[0]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.276 ns between VGA_Pattern/intpixelDATA_reg[3]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaB_reg[3]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -1.704 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[5]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.347 ns between VGA_Pattern/intpixelDATA_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaR_reg[2]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -1.708 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[9]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.401 ns between VGA_Pattern/intpixelDATA_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaR_reg[2]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -1.727 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[5]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.411 ns between VGA_Pattern/intpixelDATA_reg[3]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaB_reg[3]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -1.736 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[3]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.592 ns between VGA_Pattern/intpixelDATA_reg[3]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaB_reg[3]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -1.790 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[3]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.322 ns between VGA_Pattern/intpixelDATA_reg[4]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaG_reg[0]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -1.840 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[7]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.332 ns between VGA_Pattern/intpixelDATA_reg[8]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaR_reg[0]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -1.857 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[2]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.336 ns between VGA_Pattern/intpixelDATA_reg[9]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaR_reg[1]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -1.860 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelX_reg[4]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.349 ns between VGA_Pattern/intpixelDATA_reg[1]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaB_reg[1]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -2.000 ns between VGA_Pattern/intpixelDATA_reg[1]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaB_reg[1]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.368 ns between VGA_Pattern/intpixelDATA_reg[6]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaG_reg[2]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -2.035 ns between VGA_Pattern/intpixelDATA_reg[6]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaG_reg[2]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.399 ns between VGA_Pattern/intpixelDATA_reg[1]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaB_reg[1]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -2.042 ns between VGA_Pattern/intpixelDATA_reg[1]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaB_reg[1]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.460 ns between VGA_Pattern/intpixelDATA_reg[11]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaR_reg[3]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -2.131 ns between VGA_Pattern/intpixelDATA_reg[6]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaG_reg[2]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.473 ns between VGA_Pattern/intpixelDATA_reg[0]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaB_reg[0]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -2.179 ns between VGA_Pattern/intpixelDATA_reg[7]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaG_reg[3]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.528 ns between VGA_Pattern/intpixelDATA_reg[1]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaB_reg[1]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -2.193 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[11]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.537 ns between VGA_Pattern/intpixelDATA_reg[8]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaR_reg[0]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -2.193 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[9]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.616 ns between VGA_Pattern/intpixelDATA_reg[2]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaB_reg[2]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#32 Warning
 Large setup violation  
-There is a large setup violation of -2.211 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[10]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.675 ns between VGA_Pattern/intpixelDATA_reg[5]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaG_reg[1]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#33 Warning
 Large setup violation  
-There is a large setup violation of -2.211 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[7]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.731 ns between VGA_Pattern/intpixelDATA_reg[9]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaR_reg[1]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#34 Warning
 Large setup violation  
-There is a large setup violation of -2.248 ns between VGA_Pattern/intpixelDATA_reg[8]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA640x480/intvgaR_reg[0]/D (clocked by CLK640x480_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.740 ns between VGA_Pattern/intpixelDATA_reg[6]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaG_reg[2]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#35 Warning
 Large setup violation  
-There is a large setup violation of -2.274 ns between VGA_Pattern/intpixelDATA_reg[7]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaG_reg[3]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.782 ns between VGA_Pattern/intpixelDATA_reg[2]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaB_reg[2]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#36 Warning
 Large setup violation  
-There is a large setup violation of -2.298 ns between VGA_Pattern/intpixelDATA_reg[4]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaG_reg[0]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.813 ns between VGA_Pattern/intpixelDATA_reg[7]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaG_reg[3]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#37 Warning
 Large setup violation  
-There is a large setup violation of -2.322 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[3]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.821 ns between VGA_Pattern/intpixelDATA_reg[7]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaG_reg[3]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#38 Warning
 Large setup violation  
-There is a large setup violation of -2.322 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[5]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.824 ns between VGA_Pattern/intpixelDATA_reg[9]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaR_reg[1]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#39 Warning
 Large setup violation  
-There is a large setup violation of -2.325 ns between VGA_Pattern/intpixelDATA_reg[4]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaG_reg[0]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.854 ns between VGA_Pattern/intpixelDATA_reg[4]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaG_reg[0]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#40 Warning
 Large setup violation  
-There is a large setup violation of -2.337 ns between VGA_Pattern/intpixelDATA_reg[8]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaR_reg[0]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.874 ns between VGA_Pattern/intpixelDATA_reg[0]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaB_reg[0]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#41 Warning
 Large setup violation  
-There is a large setup violation of -2.343 ns between VGA_Pattern/intpixelDATA_reg[4]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaG_reg[0]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.897 ns between VGA_Pattern/intpixelDATA_reg[0]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaB_reg[0]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#42 Warning
 Large setup violation  
-There is a large setup violation of -2.348 ns between VGA_Pattern/intpixelDATA_reg[8]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaR_reg[0]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.993 ns between VGA_Pattern/intpixelDATA_reg[11]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaR_reg[3]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#43 Warning
 Large setup violation  
-There is a large setup violation of -2.350 ns between VGA_Pattern/intpixelDATA_reg[11]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaR_reg[3]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.008 ns between VGA_Pattern/intpixelDATA_reg[6]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaG_reg[2]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#44 Warning
 Large setup violation  
-There is a large setup violation of -2.356 ns between VGA_Pattern/intpixelDATA_reg[8]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaR_reg[0]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.064 ns between VGA_Pattern/intpixelDATA_reg[5]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaG_reg[1]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#45 Warning
 Large setup violation  
-There is a large setup violation of -2.358 ns between VGA_Pattern/intpixelDATA_reg[11]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaR_reg[3]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.192 ns between VGA_Pattern/intpixelDATA_reg[11]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaR_reg[3]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#46 Warning
 Large setup violation  
-There is a large setup violation of -2.363 ns between VGA_Pattern/intpixelDATA_reg[1]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaB_reg[1]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.337 ns between VGA_Pattern/intpixelDATA_reg[2]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaB_reg[2]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#47 Warning
 Large setup violation  
-There is a large setup violation of -2.369 ns between VGA_Pattern/intpixelDATA_reg[11]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA640x480/intvgaR_reg[3]/D (clocked by CLK640x480_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.361 ns between VGA_Pattern/intpixelDATA_reg[4]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaG_reg[0]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#48 Warning
 Large setup violation  
-There is a large setup violation of -2.372 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[4]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.552 ns between VGA_Pattern/intpixelDATA_reg[5]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaG_reg[1]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#49 Warning
 Large setup violation  
-There is a large setup violation of -2.405 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[0]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.560 ns between VGA_Pattern/intpixelDATA_reg[8]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaR_reg[0]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#50 Warning
 Large setup violation  
-There is a large setup violation of -2.405 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[6]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.729 ns between VGA_Pattern/intpixelDATA_reg[7]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaG_reg[3]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#51 Warning
 Large setup violation  
-There is a large setup violation of -2.405 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[8]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -65.927 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[0]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#52 Warning
 Large setup violation  
-There is a large setup violation of -2.419 ns between VGA_Pattern/intpixelDATA_reg[6]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaG_reg[2]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.104 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[1]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#53 Warning
 Large setup violation  
-There is a large setup violation of -2.420 ns between VGA_Pattern/intpixelDATA_reg[7]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaG_reg[3]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.187 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternDATA_reg[0]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#54 Warning
 Large setup violation  
-There is a large setup violation of -2.440 ns between VGA_Pattern/intpixelDATA_reg[11]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaR_reg[3]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.187 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternDATA_reg[1]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#55 Warning
 Large setup violation  
-There is a large setup violation of -2.474 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[1]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.187 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternDATA_reg[2]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#56 Warning
 Large setup violation  
-There is a large setup violation of -2.527 ns between VGA_Display/VGA1280x1024/pixelXCNT_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/pixelY_reg[2]/CE (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.187 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternDATA_reg[3]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#57 Warning
 Large setup violation  
-There is a large setup violation of -3.539 ns between VGA_Pattern/intpixelDATA_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaR_reg[2]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.227 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[2]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#58 Warning
 Large setup violation  
-There is a large setup violation of -3.570 ns between VGA_Pattern/intpixelDATA_reg[9]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaR_reg[1]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.286 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[3]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#59 Warning
 Large setup violation  
-There is a large setup violation of -3.614 ns between VGA_Pattern/intpixelDATA_reg[5]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaG_reg[1]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.435 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[4]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#60 Warning
 Large setup violation  
-There is a large setup violation of -3.692 ns between VGA_Pattern/intpixelDATA_reg[5]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaG_reg[1]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.451 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[6]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#61 Warning
 Large setup violation  
-There is a large setup violation of -3.960 ns between VGA_Pattern/intpixelDATA_reg[3]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaB_reg[3]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.525 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[7]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#62 Warning
 Large setup violation  
-There is a large setup violation of -4.015 ns between VGA_Pattern/intpixelDATA_reg[0]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaB_reg[0]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.546 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[5]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#63 Warning
 Large setup violation  
-There is a large setup violation of -4.054 ns between VGA_Pattern/intpixelDATA_reg[9]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaR_reg[1]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.548 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[8]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#64 Warning
 Large setup violation  
-There is a large setup violation of -4.127 ns between VGA_Pattern/intpixelDATA_reg[2]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaB_reg[2]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.564 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[10]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#65 Warning
 Large setup violation  
-There is a large setup violation of -4.230 ns between VGA_Pattern/intpixelDATA_reg[3]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaB_reg[3]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.638 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[11]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#66 Warning
 Large setup violation  
-There is a large setup violation of -4.292 ns between VGA_Pattern/intpixelDATA_reg[9]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaR_reg[1]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.659 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[9]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#67 Warning
 Large setup violation  
-There is a large setup violation of -4.347 ns between VGA_Pattern/intpixelDATA_reg[3]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1280x1024/intvgaB_reg[3]/D (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.662 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[12]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#68 Warning
 Large setup violation  
-There is a large setup violation of -4.358 ns between VGA_Pattern/intpixelDATA_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaR_reg[2]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.678 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[14]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#69 Warning
 Large setup violation  
-There is a large setup violation of -4.371 ns between VGA_Pattern/intpixelDATA_reg[5]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaG_reg[1]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.752 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[15]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#70 Warning
 Large setup violation  
-There is a large setup violation of -4.590 ns between VGA_Pattern/intpixelDATA_reg[0]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaB_reg[0]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.773 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[13]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#71 Warning
 Large setup violation  
-There is a large setup violation of -4.600 ns between VGA_Pattern/intpixelDATA_reg[9]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA640x480/intvgaR_reg[1]/D (clocked by CLK640x480_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.775 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[16]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#72 Warning
 Large setup violation  
-There is a large setup violation of -4.677 ns between VGA_Pattern/intpixelDATA_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA640x480/intvgaR_reg[2]/D (clocked by CLK640x480_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.791 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[18]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#73 Warning
 Large setup violation  
-There is a large setup violation of -4.987 ns between VGA_Pattern/intpixelDATA_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaR_reg[2]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.865 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[19]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#74 Warning
 Large setup violation  
-There is a large setup violation of -5.024 ns between VGA_Pattern/intpixelDATA_reg[2]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA800x600/intvgaB_reg[2]/D (clocked by CLK800x600_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.886 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[17]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#75 Warning
 Large setup violation  
-There is a large setup violation of -5.352 ns between VGA_Pattern/intpixelDATA_reg[0]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaB_reg[0]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.889 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[20]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#76 Warning
 Large setup violation  
-There is a large setup violation of -5.880 ns between VGA_Pattern/intpixelDATA_reg[2]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Display/VGA1024x768/intvgaB_reg[2]/D (clocked by CLK1024x768_vga_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.905 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[22]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#77 Warning
 Large setup violation  
-There is a large setup violation of -7.473 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[10]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -66.979 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[23]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#78 Warning
 Large setup violation  
-There is a large setup violation of -7.533 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[9]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.000 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[21]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#79 Warning
 Large setup violation  
-There is a large setup violation of -7.534 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[11]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -67.003 ns between VGA_Pattern/h_DISPLAY_reg[10]/C (clocked by sysCLK_clock_bd_clk_wiz_0_0) and VGA_Pattern/patternCNT_reg[24]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#80 Warning
 Large setup violation  
-There is a large setup violation of -7.537 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[8]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.250 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[0]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#81 Warning
 Large setup violation  
-There is a large setup violation of -7.592 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[1]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.478 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[3]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#82 Warning
 Large setup violation  
-There is a large setup violation of -7.616 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[3]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.500 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[10]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#83 Warning
 Large setup violation  
-There is a large setup violation of -7.627 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[5]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.535 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[5]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#84 Warning
 Large setup violation  
-There is a large setup violation of -7.633 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[0]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.552 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[8]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#85 Warning
 Large setup violation  
-There is a large setup violation of -7.648 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[2]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.554 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[9]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#86 Warning
 Large setup violation  
-There is a large setup violation of -7.650 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[0]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.608 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[1]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#87 Warning
 Large setup violation  
-There is a large setup violation of -7.653 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[2]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.632 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[2]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#88 Warning
 Large setup violation  
-There is a large setup violation of -7.653 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[4]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.664 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[6]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#89 Warning
 Large setup violation  
-There is a large setup violation of -7.653 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[8]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.677 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[11]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#90 Warning
 Large setup violation  
-There is a large setup violation of -7.653 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[9]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.677 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[4]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#91 Warning
 Large setup violation  
-There is a large setup violation of -7.682 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[11]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.678 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[7]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#92 Warning
 Large setup violation  
-There is a large setup violation of -7.682 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[1]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.000 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[3]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#93 Warning
 Large setup violation  
-There is a large setup violation of -7.696 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[10]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.000 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[5]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#94 Warning
 Large setup violation  
-There is a large setup violation of -7.696 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[3]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.000 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[6]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#95 Warning
 Large setup violation  
-There is a large setup violation of -7.696 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[5]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.000 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[7]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#96 Warning
 Large setup violation  
-There is a large setup violation of -7.696 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[6]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.053 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[10]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#97 Warning
 Large setup violation  
-There is a large setup violation of -7.696 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[7]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.053 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[11]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#98 Warning
 Large setup violation  
-There is a large setup violation of -7.709 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[4]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.053 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[8]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#99 Warning
 Large setup violation  
-There is a large setup violation of -7.712 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[6]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.053 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[9]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#100 Warning
 Large setup violation  
-There is a large setup violation of -7.716 ns between VGA_Display/VGA1280x1024/pixelX_reg[1]/C (clocked by CLK1280x1024_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[7]/D (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.142 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[0]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#101 Warning
+Large setup violation  
+There is a large setup violation of -9.142 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[1]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#102 Warning
+Large setup violation  
+There is a large setup violation of -9.142 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[2]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#103 Warning
+Large setup violation  
+There is a large setup violation of -9.142 ns between VGA_Display/VGA1024x768/pixelY_reg[3]/C (clocked by CLK1024x768_vga_bd_clk_wiz_0_0) and VGA_Pattern/intpixelDATA_reg[4]/CE (clocked by sysCLK_clock_bd_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -895,12 +865,12 @@ Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An input delay is missing on vgaMODE[0] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An input delay is missing on vgaMODE[0] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 VIRTUAL_sysCLK_clock_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An input delay is missing on vgaMODE[1] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An input delay is missing on vgaMODE[1] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 VIRTUAL_sysCLK_clock_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#16 Warning
@@ -910,147 +880,72 @@ Related violations: <none>
 
 TIMING-18#17 Warning
 Missing input or output delay  
-An output delay is missing on h_SYNC relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on h_SYNC relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#18 Warning
 Missing input or output delay  
-An output delay is missing on v_SYNC relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on v_SYNC relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#19 Warning
 Missing input or output delay  
-An output delay is missing on vgaB[0] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaB[0] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#20 Warning
 Missing input or output delay  
-An output delay is missing on vgaB[1] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaB[1] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#21 Warning
 Missing input or output delay  
-An output delay is missing on vgaB[2] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaB[2] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#22 Warning
 Missing input or output delay  
-An output delay is missing on vgaB[3] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaB[3] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#23 Warning
 Missing input or output delay  
-An output delay is missing on vgaG[0] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaG[0] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#24 Warning
 Missing input or output delay  
-An output delay is missing on vgaG[1] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaG[1] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#25 Warning
 Missing input or output delay  
-An output delay is missing on vgaG[2] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaG[2] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#26 Warning
 Missing input or output delay  
-An output delay is missing on vgaG[3] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaG[3] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#27 Warning
 Missing input or output delay  
-An output delay is missing on vgaR[0] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaR[0] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#28 Warning
 Missing input or output delay  
-An output delay is missing on vgaR[1] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaR[1] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#29 Warning
 Missing input or output delay  
-An output delay is missing on vgaR[2] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
+An output delay is missing on vgaR[2] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 TIMING-18#30 Warning
 Missing input or output delay  
-An output delay is missing on vgaR[3] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK640x480_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch VGA_Pattern/h_DISPLAY_reg[10] cannot be properly analyzed as its control pin VGA_Pattern/h_DISPLAY_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch VGA_Pattern/h_DISPLAY_reg[8] cannot be properly analyzed as its control pin VGA_Pattern/h_DISPLAY_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch VGA_Pattern/nPATTERN_reg[11] cannot be properly analyzed as its control pin VGA_Pattern/nPATTERN_reg[11]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
-The latch VGA_Pattern/nPATTERN_reg[12] cannot be properly analyzed as its control pin VGA_Pattern/nPATTERN_reg[12]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#5 Warning
-Non-clocked latch  
-The latch VGA_Pattern/nPATTERN_reg[14] cannot be properly analyzed as its control pin VGA_Pattern/nPATTERN_reg[14]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#6 Warning
-Non-clocked latch  
-The latch VGA_Pattern/nPATTERN_reg[19] cannot be properly analyzed as its control pin VGA_Pattern/nPATTERN_reg[19]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch VGA_Pattern/nPATTERN_reg[6] cannot be properly analyzed as its control pin VGA_Pattern/nPATTERN_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#8 Warning
-Non-clocked latch  
-The latch VGA_Pattern/v_DISPLAY_reg[10] cannot be properly analyzed as its control pin VGA_Pattern/v_DISPLAY_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#9 Warning
-Non-clocked latch  
-The latch VGA_Pattern/v_DISPLAY_reg[4] cannot be properly analyzed as its control pin VGA_Pattern/v_DISPLAY_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#10 Warning
-Non-clocked latch  
-The latch VGA_Pattern/v_DISPLAY_reg[6] cannot be properly analyzed as its control pin VGA_Pattern/v_DISPLAY_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#11 Warning
-Non-clocked latch  
-The latch VGA_Pattern/v_DISPLAY_reg[7] cannot be properly analyzed as its control pin VGA_Pattern/v_DISPLAY_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#12 Warning
-Non-clocked latch  
-The latch VGA_Pattern/v_DISPLAY_reg[7]_rep cannot be properly analyzed as its control pin VGA_Pattern/v_DISPLAY_reg[7]_rep/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#13 Warning
-Non-clocked latch  
-The latch VGA_Pattern/v_DISPLAY_reg[7]_rep__0 cannot be properly analyzed as its control pin VGA_Pattern/v_DISPLAY_reg[7]_rep__0/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#14 Warning
-Non-clocked latch  
-The latch VGA_Pattern/v_DISPLAY_reg[8] cannot be properly analyzed as its control pin VGA_Pattern/v_DISPLAY_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#15 Warning
-Non-clocked latch  
-The latch VGA_Pattern/v_DISPLAY_reg[9] cannot be properly analyzed as its control pin VGA_Pattern/v_DISPLAY_reg[9]/G is not reached by a timing clock
+An output delay is missing on vgaR[3] relative to clock(s) VIRTUAL_CLK1024x768_vga_bd_clk_wiz_0_0 VIRTUAL_CLK1280x1024_vga_bd_clk_wiz_0_0 VIRTUAL_CLK800x600_vga_bd_clk_wiz_0_0 
 Related violations: <none>
 
 XDCC-1#1 Warning
@@ -1065,6 +960,104 @@ Scoped Clock constraint overwritten on the same source
 A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
 New: create_clock -period 10.000 [get_ports CLK] (Source: c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0.xdc (Line: 56))
 Previous: create_clock -period 10.000 [get_ports CLK] (Source: c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0.xdc (Line: 56))
+Related violations: <none>
+
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'h_SYNC' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports h_SYNC]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 14)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'v_SYNC' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports v_SYNC]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 15)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaB[0]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaB]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaB[1]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaB]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaB[2]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaB]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#6 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaB[3]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaB]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 13)
+Related violations: <none>
+
+XDCH-2#7 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaG[0]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaG]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#8 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaG[1]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaG]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#9 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaG[2]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaG]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#10 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaG[3]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaG]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#11 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaR[0]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaR]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 11)
+Related violations: <none>
+
+XDCH-2#12 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaR[1]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaR]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 11)
+Related violations: <none>
+
+XDCH-2#13 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaR[2]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaR]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 11)
+Related violations: <none>
+
+XDCH-2#14 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'vgaR[3]' relative to clock sys_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock sys_clk 5.000 [get_ports vgaR]
+C:/Users/local/Documents/GitHub/source/_vhdl/constraints/basys3_clock.xdc (Line: 11)
 Related violations: <none>
 
 

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root MajorVersion="0" MinorVersion="33">
-  <CompositeFile CompositeFileTopName="vga_bd" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+  <CompositeFile CompositeFileTopName="vga_bd" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1493033692"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1493033692"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1493033692"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1493707503"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1493707503"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1493707503"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\vga_bd_clk_wiz_0_0\vga_bd_clk_wiz_0_0.xci" Type="IP">
         <Instance HierarchyPath="clk_wiz_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\vga_bd_util_vector_logic_0_0\vga_bd_util_vector_logic_0_0.xci" Type="IP">
+        <Instance HierarchyPath="util_vector_logic_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

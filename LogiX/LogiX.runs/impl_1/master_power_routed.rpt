@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Tue Apr 25 11:44:00 2017
+| Date             : Mon May  1 23:14:13 2017
 | Host             : LAPTOP running 64-bit major release  (build 9200)
 | Command          : report_power -file master_power_routed.rpt -pb master_power_summary_routed.pb -rpx master_power_routed.rpx
 | Design           : master
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.397 |
-| Dynamic (W)              | 0.325 |
+| Total On-Chip Power (W)  | 0.251 |
+| Dynamic (W)              | 0.179 |
 | Device Static (W)        | 0.072 |
 | Effective TJA (C/W)      | 5.0   |
-| Max Ambient (C)          | 83.0  |
-| Junction Temperature (C) | 27.0  |
+| Max Ambient (C)          | 83.7  |
+| Junction Temperature (C) | 26.3  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,17 +49,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.006 |       18 |       --- |             --- |
-| Slice Logic    |     0.026 |     3790 |       --- |             --- |
-|   LUT as Logic |     0.022 |     2181 |     20800 |           10.49 |
-|   CARRY4       |     0.004 |      579 |      8150 |            7.10 |
-|   Register     |    <0.001 |      467 |     41600 |            1.12 |
-|   Others       |     0.000 |       45 |       --- |             --- |
-| Signals        |     0.021 |     2384 |       --- |             --- |
-| MMCM           |     0.251 |        2 |         5 |           40.00 |
-| I/O            |     0.021 |       34 |       106 |           32.08 |
+| Clocks         |     0.005 |       16 |       --- |             --- |
+| Slice Logic    |     0.010 |     1650 |       --- |             --- |
+|   LUT as Logic |     0.008 |     1020 |     20800 |            4.90 |
+|   CARRY4       |     0.002 |      247 |      8150 |            3.03 |
+|   Register     |    <0.001 |      220 |     41600 |            0.53 |
+|   Others       |     0.000 |       26 |       --- |             --- |
+| Signals        |     0.011 |     1245 |       --- |             --- |
+| MMCM           |     0.125 |        2 |         5 |           40.00 |
+| I/O            |     0.028 |       34 |       106 |           32.08 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.397 |          |           |                 |
+| Total          |     0.251 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,9 +69,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.064 |       0.054 |      0.010 |
-| Vccaux    |       1.800 |     0.152 |       0.139 |      0.013 |
-| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |
+| Vccint    |       1.000 |     0.036 |       0.026 |      0.010 |
+| Vccaux    |       1.800 |     0.083 |       0.070 |      0.013 |
+| Vcco33    |       3.300 |     0.009 |       0.008 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -130,8 +130,6 @@ Table of Contents
 | CLK1024x768_vga_bd_clk_wiz_0_0_1  | VGA_Clock/clk_wiz_0/inst/CLK1024x768_vga_bd_clk_wiz_0_0  |            15.4 |
 | CLK1280x1024_vga_bd_clk_wiz_0_0   | VGA_Clock/clk_wiz_0/inst/CLK1280x1024_vga_bd_clk_wiz_0_0 |             9.3 |
 | CLK1280x1024_vga_bd_clk_wiz_0_0_1 | VGA_Clock/clk_wiz_0/inst/CLK1280x1024_vga_bd_clk_wiz_0_0 |             9.3 |
-| CLK640x480_vga_bd_clk_wiz_0_0     | VGA_Clock/clk_wiz_0/inst/CLK640x480_vga_bd_clk_wiz_0_0   |            39.4 |
-| CLK640x480_vga_bd_clk_wiz_0_0_1   | VGA_Clock/clk_wiz_0/inst/CLK640x480_vga_bd_clk_wiz_0_0   |            39.4 |
 | CLK800x600_vga_bd_clk_wiz_0_0     | VGA_Clock/clk_wiz_0/inst/CLK800x600_vga_bd_clk_wiz_0_0   |            25.0 |
 | CLK800x600_vga_bd_clk_wiz_0_0_1   | VGA_Clock/clk_wiz_0/inst/CLK800x600_vga_bd_clk_wiz_0_0   |            25.0 |
 | clkfbout_clock_bd_clk_wiz_0_0     | Clock/clk_wiz_0/inst/clkfbout_clock_bd_clk_wiz_0_0       |            10.0 |
@@ -153,19 +151,18 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| master           |     0.325 |
-|   Clock          |     0.127 |
-|     clk_wiz_0    |     0.127 |
-|       inst       |     0.127 |
-|   VGA_Clock      |     0.125 |
-|     clk_wiz_0    |     0.125 |
-|       inst       |     0.125 |
-|   VGA_Display    |     0.008 |
-|     VGA1024x768  |     0.002 |
-|     VGA1280x1024 |     0.004 |
-|     VGA640x480   |    <0.001 |
+| master           |     0.179 |
+|   Clock          |     0.064 |
+|     clk_wiz_0    |     0.064 |
+|       inst       |     0.064 |
+|   VGA_Clock      |     0.062 |
+|     clk_wiz_0    |     0.062 |
+|       inst       |     0.062 |
+|   VGA_Display    |     0.004 |
+|     VGA1024x768  |     0.001 |
+|     VGA1280x1024 |     0.001 |
 |     VGA800x600   |     0.001 |
-|   VGA_Pattern    |     0.044 |
+|   VGA_Pattern    |     0.021 |
 +------------------+-----------+
 
 

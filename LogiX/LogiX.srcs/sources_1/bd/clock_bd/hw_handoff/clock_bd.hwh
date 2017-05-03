@@ -1,22 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Apr 22 11:47:28 2017" VIVADOVERSION="2017.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May  2 08:44:47 2017" VIVADOVERSION="2017.1">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="clock_bd" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="RESET" SIGIS="rst" SIGNAME="External_Ports_RESET">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="resetn"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="notEN" SIGIS="undef" SIGNAME="External_Ports_notEN">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="power_down"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="sysLOCK" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -27,6 +17,16 @@
     <PORT CLKFREQUENCY="168000000" DIR="O" NAME="sysCLK" SIGIS="clk" SIGNAME="clk_wiz_0_sysCLK">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="sysCLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="notEN" SIGIS="undef" SIGNAME="External_Ports_notEN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RESET" SIGIS="rst" SIGNAME="External_Ports_RESET">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -91,7 +91,7 @@
         <PARAMETER NAME="C_SECONDARY_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
         <PARAMETER NAME="C_CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
         <PARAMETER NAME="C_USE_RESET" VALUE="1"/>
-        <PARAMETER NAME="C_RESET_LOW" VALUE="1"/>
+        <PARAMETER NAME="C_RESET_LOW" VALUE="0"/>
         <PARAMETER NAME="C_USE_LOCKED" VALUE="1"/>
         <PARAMETER NAME="C_USE_INCLK_STOPPED" VALUE="0"/>
         <PARAMETER NAME="C_USE_CLKFB_STOPPED" VALUE="0"/>
@@ -250,7 +250,7 @@
         <PARAMETER NAME="C_CLK_OUT5_PORT" VALUE="clk_out5"/>
         <PARAMETER NAME="C_CLK_OUT6_PORT" VALUE="clk_out6"/>
         <PARAMETER NAME="C_CLK_OUT7_PORT" VALUE="clk_out7"/>
-        <PARAMETER NAME="C_RESET_PORT" VALUE="resetn"/>
+        <PARAMETER NAME="C_RESET_PORT" VALUE="reset"/>
         <PARAMETER NAME="C_LOCKED_PORT" VALUE="locked"/>
         <PARAMETER NAME="C_CLKFB_IN_PORT" VALUE="clkfb_in"/>
         <PARAMETER NAME="C_CLKFB_IN_P_PORT" VALUE="clkfb_in_p"/>
@@ -479,7 +479,7 @@
         <PARAMETER NAME="USE_CLK_VALID" VALUE="false"/>
         <PARAMETER NAME="USE_INCLK_STOPPED" VALUE="false"/>
         <PARAMETER NAME="USE_CLKFB_STOPPED" VALUE="false"/>
-        <PARAMETER NAME="RESET_PORT" VALUE="resetn"/>
+        <PARAMETER NAME="RESET_PORT" VALUE="reset"/>
         <PARAMETER NAME="LOCKED_PORT" VALUE="locked"/>
         <PARAMETER NAME="POWER_DOWN_PORT" VALUE="power_down"/>
         <PARAMETER NAME="CLK_VALID_PORT" VALUE="CLK_VALID"/>
@@ -561,7 +561,7 @@
         <PARAMETER NAME="PLL_CLKOUT5_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="PLL_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="PLL_CLKOUT5_PHASE" VALUE="0.000"/>
-        <PARAMETER NAME="RESET_TYPE" VALUE="ACTIVE_LOW"/>
+        <PARAMETER NAME="RESET_TYPE" VALUE="ACTIVE_HIGH"/>
         <PARAMETER NAME="USE_SAFE_CLOCK_STARTUP" VALUE="false"/>
         <PARAMETER NAME="USE_CLOCK_SEQUENCING" VALUE="false"/>
         <PARAMETER NAME="CLKOUT1_SEQUENCE_NUMBER" VALUE="1"/>
@@ -604,7 +604,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="resetn" SIGIS="rst" SIGNAME="External_Ports_RESET">
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_RESET">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="RESET"/>
           </CONNECTIONS>
@@ -614,19 +614,42 @@
             <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sysLOCK"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="168000000" DIR="O" NAME="sysCLK" SIGIS="clk" SIGNAME="clk_wiz_0_sysCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="sysCLK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="power_down" SIGIS="undef" SIGNAME="External_Ports_notEN">
+        <PORT DIR="I" NAME="power_down" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysLOCK"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/util_vector_logic_0" HWVERSION="2.0" INSTANCE="util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="clock_bd_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_notEN">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="notEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="power_down"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -59,7 +59,6 @@
 // CLK1280x1024___108.009______0.000______50.0______256.807____408.086
 // CLK1024x768____64.974______0.000______50.0______275.099____408.086
 // CLK800x600____39.984______0.000______50.0______293.873____408.086
-// CLK640x480____25.356______0.000______50.0______313.553____408.086
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -68,7 +67,7 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "vga_bd_clk_wiz_0_0,clk_wiz_v5_4_0_0,{component_name=vga_bd_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=4,clkin1_period=10.000,clkin2_period=10.000,use_power_down=true,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "vga_bd_clk_wiz_0_0,clk_wiz_v5_4_0_0,{component_name=vga_bd_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=3,clkin1_period=10.000,clkin2_period=10.000,use_power_down=true,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module vga_bd_clk_wiz_0_0 
  (
@@ -76,9 +75,8 @@ module vga_bd_clk_wiz_0_0
   output        CLK1280x1024,
   output        CLK1024x768,
   output        CLK800x600,
-  output        CLK640x480,
   // Status and control signals
-  input         resetn,
+  input         reset,
   input         power_down,
   output        locked,
  // Clock in ports
@@ -91,9 +89,8 @@ module vga_bd_clk_wiz_0_0
   .CLK1280x1024(CLK1280x1024),
   .CLK1024x768(CLK1024x768),
   .CLK800x600(CLK800x600),
-  .CLK640x480(CLK640x480),
   // Status and control signals               
-  .resetn(resetn), 
+  .reset(reset), 
   .power_down(power_down),
   .locked(locked),
  // Clock in ports

@@ -157,6 +157,9 @@ proc create_root_design { parentCell } {
   # Create ports
   set CLK [ create_bd_port -dir I -type clk CLK ]
   set RESET [ create_bd_port -dir I -type rst RESET ]
+  set_property -dict [ list \
+CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] $RESET
   set notEN [ create_bd_port -dir I notEN ]
   set sysCLK [ create_bd_port -dir O -type clk sysCLK ]
   set_property -dict [ list \
@@ -183,17 +186,26 @@ CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
 CONFIG.MMCM_CLKOUT1_PHASE {0.000} \
 CONFIG.MMCM_DIVCLK_DIVIDE {1} \
 CONFIG.NUM_OUT_CLKS {1} \
-CONFIG.RESET_PORT {resetn} \
-CONFIG.RESET_TYPE {ACTIVE_LOW} \
+CONFIG.RESET_PORT {reset} \
+CONFIG.RESET_TYPE {ACTIVE_HIGH} \
 CONFIG.USE_POWER_DOWN {true} \
  ] $clk_wiz_0
 
+  # Create instance: util_vector_logic_0, and set properties
+  set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 ]
+  set_property -dict [ list \
+CONFIG.C_OPERATION {not} \
+CONFIG.C_SIZE {1} \
+CONFIG.LOGO_FILE {data/sym_notgate.png} \
+ ] $util_vector_logic_0
+
   # Create port connections
+  connect_bd_net -net RESET_1 [get_bd_ports RESET] [get_bd_pins clk_wiz_0/reset]
   connect_bd_net -net clk_in1_1 [get_bd_ports CLK] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_locked [get_bd_ports sysLOCK] [get_bd_pins clk_wiz_0/locked]
   connect_bd_net -net clk_wiz_0_sysCLK [get_bd_ports sysCLK] [get_bd_pins clk_wiz_0/sysCLK]
-  connect_bd_net -net power_down_1 [get_bd_ports notEN] [get_bd_pins clk_wiz_0/power_down]
-  connect_bd_net -net resetn_1 [get_bd_ports RESET] [get_bd_pins clk_wiz_0/resetn]
+  connect_bd_net -net notEN_1 [get_bd_ports notEN] [get_bd_pins util_vector_logic_0/Op1]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins clk_wiz_0/power_down] [get_bd_pins util_vector_logic_0/Res]
 
   # Create address segments
 

@@ -3,9 +3,11 @@ vlib activehdl
 
 vlib activehdl/xil_defaultlib
 vlib activehdl/xpm
+vlib activehdl/util_vector_logic_v2_0_1
 
 vmap xil_defaultlib activehdl/xil_defaultlib
 vmap xpm activehdl/xpm
+vmap util_vector_logic_v2_0_1 activehdl/util_vector_logic_v2_0_1
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4" "+incdir+../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4" \
 "C:/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -16,6 +18,12 @@ vcom -work xpm -93 \
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4" "+incdir+../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4" \
 "../../../bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0.v" \
+
+vlog -work util_vector_logic_v2_0_1  -v2k5 "+incdir+../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4" "+incdir+../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4" \
+"../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/6d4d/hdl/util_vector_logic_v2_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4" "+incdir+../../../../LogiX.srcs/sources_1/bd/clock_bd/ipshared/65a4" \
+"../../../bd/clock_bd/ip/clock_bd_util_vector_logic_0_0/sim/clock_bd_util_vector_logic_0_0.v" \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/clock_bd/hdl/clock_bd.vhd" \

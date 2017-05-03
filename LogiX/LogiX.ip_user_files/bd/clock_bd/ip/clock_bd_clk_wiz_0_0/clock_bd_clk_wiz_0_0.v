@@ -72,7 +72,7 @@ module clock_bd_clk_wiz_0_0
   // Clock out ports
   output        sysCLK,
   // Status and control signals
-  input         resetn,
+  input         reset,
   input         power_down,
   output        locked,
  // Clock in ports
@@ -84,7 +84,7 @@ module clock_bd_clk_wiz_0_0
   // Clock out ports  
   .sysCLK(sysCLK),
   // Status and control signals               
-  .resetn(resetn), 
+  .reset(reset), 
   .power_down(power_down),
   .locked(locked),
  // Clock in ports

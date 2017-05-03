@@ -17,12 +17,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7552 
+INFO: Helper process launched with PID 12784 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 317.676 ; gain = 80.977
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 317.512 ; gain = 80.613
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'master' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:37]
-INFO: [Synth 8-3491] module 'clock_bd' declared at 'C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/hdl/clock_bd.vhd:14' bound to instance 'Clock' of component 'clock_bd' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:141]
+INFO: [Synth 8-3491] module 'clock_bd' declared at 'C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/hdl/clock_bd.vhd:14' bound to instance 'Clock' of component 'clock_bd' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:160]
 INFO: [Synth 8-638] synthesizing module 'clock_bd' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/hdl/clock_bd.vhd:28]
 INFO: [Synth 8-3491] module 'clock_bd_clk_wiz_0_0' declared at 'c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0.v:70' bound to instance 'clk_wiz_0' of component 'clock_bd_clk_wiz_0_0' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/hdl/clock_bd.vhd:49]
 INFO: [Synth 8-638] synthesizing module 'clock_bd_clk_wiz_0_0' [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0.v:70]
@@ -89,11 +89,11 @@ INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2017
 INFO: [Synth 8-256] done synthesizing module 'clock_bd_clk_wiz_0_0_clk_wiz' (4#1) [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0_clk_wiz.v:68]
 INFO: [Synth 8-256] done synthesizing module 'clock_bd_clk_wiz_0_0' (5#1) [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/ip/clock_bd_clk_wiz_0_0/clock_bd_clk_wiz_0_0.v:70]
 INFO: [Synth 8-256] done synthesizing module 'clock_bd' (6#1) [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/clock_bd/hdl/clock_bd.vhd:28]
-INFO: [Synth 8-3491] module 'vga_bd' declared at 'C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/hdl/vga_bd.vhd:14' bound to instance 'VGA_Clock' of component 'vga_bd' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:149]
-INFO: [Synth 8-638] synthesizing module 'vga_bd' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/hdl/vga_bd.vhd:31]
-INFO: [Synth 8-3491] module 'vga_bd_clk_wiz_0_0' declared at 'c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0.v:73' bound to instance 'clk_wiz_0' of component 'vga_bd_clk_wiz_0_0' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/hdl/vga_bd.vhd:61]
-INFO: [Synth 8-638] synthesizing module 'vga_bd_clk_wiz_0_0' [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0.v:73]
-INFO: [Synth 8-638] synthesizing module 'vga_bd_clk_wiz_0_0_clk_wiz' [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0_clk_wiz.v:71]
+INFO: [Synth 8-3491] module 'vga_bd' declared at 'C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/hdl/vga_bd.vhd:14' bound to instance 'VGA_Clock' of component 'vga_bd' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'vga_bd' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/hdl/vga_bd.vhd:30]
+INFO: [Synth 8-3491] module 'vga_bd_clk_wiz_0_0' declared at 'c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0.v:72' bound to instance 'clk_wiz_0' of component 'vga_bd_clk_wiz_0_0' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/hdl/vga_bd.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'vga_bd_clk_wiz_0_0' [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0.v:72]
+INFO: [Synth 8-638] synthesizing module 'vga_bd_clk_wiz_0_0_clk_wiz' [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0_clk_wiz.v:70]
 INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized0' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:20759]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 62.375000 - type: float 
@@ -113,7 +113,7 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized0' [C:/Xilinx/
 	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT3_DIVIDE bound to: 41 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
 	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
@@ -144,13 +144,13 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized0' [C:/Xilinx/
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
 INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV__parameterized0' (6#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:20759]
-INFO: [Synth 8-256] done synthesizing module 'vga_bd_clk_wiz_0_0_clk_wiz' (7#1) [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0_clk_wiz.v:71]
-INFO: [Synth 8-256] done synthesizing module 'vga_bd_clk_wiz_0_0' (8#1) [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0.v:73]
-INFO: [Synth 8-256] done synthesizing module 'vga_bd' (9#1) [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/hdl/vga_bd.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'vga_bd_clk_wiz_0_0_clk_wiz' (7#1) [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0_clk_wiz.v:70]
+INFO: [Synth 8-256] done synthesizing module 'vga_bd_clk_wiz_0_0' (8#1) [c:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/ip/vga_bd_clk_wiz_0_0/vga_bd_clk_wiz_0_0.v:72]
+INFO: [Synth 8-256] done synthesizing module 'vga_bd' (9#1) [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/bd/vga_bd/hdl/vga_bd.vhd:30]
 	Parameter nCHANNEL bound to: 1 - type: integer 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'pattern' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:19' bound to instance 'VGA_Pattern' of component 'pattern' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:160]
+INFO: [Synth 8-3491] module 'pattern' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:19' bound to instance 'VGA_Pattern' of component 'pattern' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:178]
 INFO: [Synth 8-638] synthesizing module 'pattern' [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:40]
 	Parameter nCHANNEL bound to: 1 - type: integer 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
@@ -159,147 +159,114 @@ INFO: [Synth 8-256] done synthesizing module 'pattern' (10#1) [C:/Users/local/Do
 	Parameter nCLK1280x1024 bound to: 108000000 - type: integer 
 	Parameter nCLK1024x768 bound to: 65000000 - type: integer 
 	Parameter nCLK800x600 bound to: 40000000 - type: integer 
-	Parameter nCLK640x480 bound to: 25175000 - type: integer 
 	Parameter nCHANNEL bound to: 1 - type: integer 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'display' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:22' bound to instance 'VGA_Display' of component 'display' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:171]
-INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:67]
+INFO: [Synth 8-3491] module 'display' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:22' bound to instance 'VGA_Display' of component 'display' [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:65]
 	Parameter nCLK1280x1024 bound to: 108000000 - type: integer 
 	Parameter nCLK1024x768 bound to: 65000000 - type: integer 
 	Parameter nCLK800x600 bound to: 40000000 - type: integer 
-	Parameter nCLK640x480 bound to: 25175000 - type: integer 
 	Parameter nCHANNEL bound to: 1 - type: integer 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
-	Parameter nCLK bound to: 25175000 - type: integer 
+	Parameter nCLK bound to: 40000000 - type: integer 
 	Parameter nPATTERN bound to: 4 - type: integer 
-	Parameter h_DISPLAY bound to: 640 - type: integer 
-	Parameter h_porchFRONT bound to: 16 - type: integer 
-	Parameter h_porchBACK bound to: 48 - type: integer 
-	Parameter h_syncPULSE bound to: 96 - type: integer 
-	Parameter h_POLARITY bound to: 1'b0 
-	Parameter v_DISPLAY bound to: 480 - type: integer 
-	Parameter v_porchFRONT bound to: 10 - type: integer 
-	Parameter v_porchBACK bound to: 33 - type: integer 
-	Parameter v_syncPULSE bound to: 2 - type: integer 
-	Parameter v_POLARITY bound to: 1'b0 
+	Parameter h_DISPLAY bound to: 800 - type: integer 
+	Parameter h_porchFRONT bound to: 40 - type: integer 
+	Parameter h_porchBACK bound to: 88 - type: integer 
+	Parameter h_syncPULSE bound to: 128 - type: integer 
+	Parameter h_POLARITY bound to: 1'b1 
+	Parameter v_DISPLAY bound to: 600 - type: integer 
+	Parameter v_porchFRONT bound to: 1 - type: integer 
+	Parameter v_porchBACK bound to: 23 - type: integer 
+	Parameter v_syncPULSE bound to: 4 - type: integer 
+	Parameter v_POLARITY bound to: 1'b1 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:22' bound to instance 'VGA640x480' of component 'vga' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:165]
+INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:22' bound to instance 'VGA800x600' of component 'vga' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:184]
 INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:99]
-	Parameter nCLK bound to: 25175000 - type: integer 
+	Parameter nCLK bound to: 40000000 - type: integer 
 	Parameter nPATTERN bound to: 4 - type: integer 
-	Parameter h_DISPLAY bound to: 640 - type: integer 
-	Parameter h_porchFRONT bound to: 16 - type: integer 
-	Parameter h_porchBACK bound to: 48 - type: integer 
-	Parameter h_syncPULSE bound to: 96 - type: integer 
-	Parameter h_POLARITY bound to: 1'b0 
-	Parameter v_DISPLAY bound to: 480 - type: integer 
-	Parameter v_porchFRONT bound to: 10 - type: integer 
-	Parameter v_porchBACK bound to: 33 - type: integer 
-	Parameter v_syncPULSE bound to: 2 - type: integer 
-	Parameter v_POLARITY bound to: 1'b0 
+	Parameter h_DISPLAY bound to: 800 - type: integer 
+	Parameter h_porchFRONT bound to: 40 - type: integer 
+	Parameter h_porchBACK bound to: 88 - type: integer 
+	Parameter h_syncPULSE bound to: 128 - type: integer 
+	Parameter h_POLARITY bound to: 1'b1 
+	Parameter v_DISPLAY bound to: 600 - type: integer 
+	Parameter v_porchFRONT bound to: 1 - type: integer 
+	Parameter v_porchBACK bound to: 23 - type: integer 
+	Parameter v_syncPULSE bound to: 4 - type: integer 
+	Parameter v_POLARITY bound to: 1'b1 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'vga' (11#1) [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:99]
-	Parameter nCLK bound to: 40000000 - type: integer 
+	Parameter nCLK bound to: 65000000 - type: integer 
 	Parameter nPATTERN bound to: 4 - type: integer 
-	Parameter h_DISPLAY bound to: 800 - type: integer 
-	Parameter h_porchFRONT bound to: 40 - type: integer 
-	Parameter h_porchBACK bound to: 88 - type: integer 
-	Parameter h_syncPULSE bound to: 128 - type: integer 
-	Parameter h_POLARITY bound to: 1'b1 
-	Parameter v_DISPLAY bound to: 600 - type: integer 
-	Parameter v_porchFRONT bound to: 1 - type: integer 
-	Parameter v_porchBACK bound to: 23 - type: integer 
-	Parameter v_syncPULSE bound to: 4 - type: integer 
-	Parameter v_POLARITY bound to: 1'b1 
+	Parameter h_DISPLAY bound to: 1024 - type: integer 
+	Parameter h_porchFRONT bound to: 24 - type: integer 
+	Parameter h_porchBACK bound to: 160 - type: integer 
+	Parameter h_syncPULSE bound to: 136 - type: integer 
+	Parameter h_POLARITY bound to: 1'b0 
+	Parameter v_DISPLAY bound to: 768 - type: integer 
+	Parameter v_porchFRONT bound to: 3 - type: integer 
+	Parameter v_porchBACK bound to: 29 - type: integer 
+	Parameter v_syncPULSE bound to: 6 - type: integer 
+	Parameter v_POLARITY bound to: 1'b0 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:22' bound to instance 'VGA800x600' of component 'vga' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:194]
+INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:22' bound to instance 'VGA1024x768' of component 'vga' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:213]
 INFO: [Synth 8-638] synthesizing module 'vga__parameterized1' [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:99]
-	Parameter nCLK bound to: 40000000 - type: integer 
+	Parameter nCLK bound to: 65000000 - type: integer 
 	Parameter nPATTERN bound to: 4 - type: integer 
-	Parameter h_DISPLAY bound to: 800 - type: integer 
-	Parameter h_porchFRONT bound to: 40 - type: integer 
-	Parameter h_porchBACK bound to: 88 - type: integer 
-	Parameter h_syncPULSE bound to: 128 - type: integer 
-	Parameter h_POLARITY bound to: 1'b1 
-	Parameter v_DISPLAY bound to: 600 - type: integer 
-	Parameter v_porchFRONT bound to: 1 - type: integer 
-	Parameter v_porchBACK bound to: 23 - type: integer 
-	Parameter v_syncPULSE bound to: 4 - type: integer 
-	Parameter v_POLARITY bound to: 1'b1 
+	Parameter h_DISPLAY bound to: 1024 - type: integer 
+	Parameter h_porchFRONT bound to: 24 - type: integer 
+	Parameter h_porchBACK bound to: 160 - type: integer 
+	Parameter h_syncPULSE bound to: 136 - type: integer 
+	Parameter h_POLARITY bound to: 1'b0 
+	Parameter v_DISPLAY bound to: 768 - type: integer 
+	Parameter v_porchFRONT bound to: 3 - type: integer 
+	Parameter v_porchBACK bound to: 29 - type: integer 
+	Parameter v_syncPULSE bound to: 6 - type: integer 
+	Parameter v_POLARITY bound to: 1'b0 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'vga__parameterized1' (11#1) [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:99]
-	Parameter nCLK bound to: 65000000 - type: integer 
+	Parameter nCLK bound to: 108000000 - type: integer 
 	Parameter nPATTERN bound to: 4 - type: integer 
-	Parameter h_DISPLAY bound to: 1024 - type: integer 
-	Parameter h_porchFRONT bound to: 24 - type: integer 
-	Parameter h_porchBACK bound to: 160 - type: integer 
-	Parameter h_syncPULSE bound to: 136 - type: integer 
-	Parameter h_POLARITY bound to: 1'b0 
-	Parameter v_DISPLAY bound to: 768 - type: integer 
-	Parameter v_porchFRONT bound to: 3 - type: integer 
-	Parameter v_porchBACK bound to: 29 - type: integer 
-	Parameter v_syncPULSE bound to: 6 - type: integer 
-	Parameter v_POLARITY bound to: 1'b0 
+	Parameter h_DISPLAY bound to: 1280 - type: integer 
+	Parameter h_porchFRONT bound to: 48 - type: integer 
+	Parameter h_porchBACK bound to: 248 - type: integer 
+	Parameter h_syncPULSE bound to: 112 - type: integer 
+	Parameter h_POLARITY bound to: 1'b1 
+	Parameter v_DISPLAY bound to: 1024 - type: integer 
+	Parameter v_porchFRONT bound to: 1 - type: integer 
+	Parameter v_porchBACK bound to: 38 - type: integer 
+	Parameter v_syncPULSE bound to: 3 - type: integer 
+	Parameter v_POLARITY bound to: 1'b1 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:22' bound to instance 'VGA1024x768' of component 'vga' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:223]
+INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:22' bound to instance 'VGA1280x1024' of component 'vga' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:242]
 INFO: [Synth 8-638] synthesizing module 'vga__parameterized3' [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:99]
-	Parameter nCLK bound to: 65000000 - type: integer 
+	Parameter nCLK bound to: 108000000 - type: integer 
 	Parameter nPATTERN bound to: 4 - type: integer 
-	Parameter h_DISPLAY bound to: 1024 - type: integer 
-	Parameter h_porchFRONT bound to: 24 - type: integer 
-	Parameter h_porchBACK bound to: 160 - type: integer 
-	Parameter h_syncPULSE bound to: 136 - type: integer 
-	Parameter h_POLARITY bound to: 1'b0 
-	Parameter v_DISPLAY bound to: 768 - type: integer 
-	Parameter v_porchFRONT bound to: 3 - type: integer 
-	Parameter v_porchBACK bound to: 29 - type: integer 
-	Parameter v_syncPULSE bound to: 6 - type: integer 
-	Parameter v_POLARITY bound to: 1'b0 
+	Parameter h_DISPLAY bound to: 1280 - type: integer 
+	Parameter h_porchFRONT bound to: 48 - type: integer 
+	Parameter h_porchBACK bound to: 248 - type: integer 
+	Parameter h_syncPULSE bound to: 112 - type: integer 
+	Parameter h_POLARITY bound to: 1'b1 
+	Parameter v_DISPLAY bound to: 1024 - type: integer 
+	Parameter v_porchFRONT bound to: 1 - type: integer 
+	Parameter v_porchBACK bound to: 38 - type: integer 
+	Parameter v_syncPULSE bound to: 3 - type: integer 
+	Parameter v_POLARITY bound to: 1'b1 
 	Parameter pxDATASIZE bound to: 4 - type: integer 
 	Parameter pxMAX bound to: 12 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'vga__parameterized3' (11#1) [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:99]
-	Parameter nCLK bound to: 108000000 - type: integer 
-	Parameter nPATTERN bound to: 4 - type: integer 
-	Parameter h_DISPLAY bound to: 1280 - type: integer 
-	Parameter h_porchFRONT bound to: 48 - type: integer 
-	Parameter h_porchBACK bound to: 248 - type: integer 
-	Parameter h_syncPULSE bound to: 112 - type: integer 
-	Parameter h_POLARITY bound to: 1'b1 
-	Parameter v_DISPLAY bound to: 1024 - type: integer 
-	Parameter v_porchFRONT bound to: 1 - type: integer 
-	Parameter v_porchBACK bound to: 38 - type: integer 
-	Parameter v_syncPULSE bound to: 3 - type: integer 
-	Parameter v_POLARITY bound to: 1'b1 
-	Parameter pxDATASIZE bound to: 4 - type: integer 
-	Parameter pxMAX bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:22' bound to instance 'VGA1280x1024' of component 'vga' [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:252]
-INFO: [Synth 8-638] synthesizing module 'vga__parameterized5' [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:99]
-	Parameter nCLK bound to: 108000000 - type: integer 
-	Parameter nPATTERN bound to: 4 - type: integer 
-	Parameter h_DISPLAY bound to: 1280 - type: integer 
-	Parameter h_porchFRONT bound to: 48 - type: integer 
-	Parameter h_porchBACK bound to: 248 - type: integer 
-	Parameter h_syncPULSE bound to: 112 - type: integer 
-	Parameter h_POLARITY bound to: 1'b1 
-	Parameter v_DISPLAY bound to: 1024 - type: integer 
-	Parameter v_porchFRONT bound to: 1 - type: integer 
-	Parameter v_porchBACK bound to: 38 - type: integer 
-	Parameter v_syncPULSE bound to: 3 - type: integer 
-	Parameter v_POLARITY bound to: 1'b1 
-	Parameter pxDATASIZE bound to: 4 - type: integer 
-	Parameter pxMAX bound to: 12 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'vga__parameterized5' (11#1) [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:99]
-INFO: [Synth 8-256] done synthesizing module 'display' (12#1) [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'display' (12#1) [C:/Users/local/Documents/GitHub/source/_vhdl/source/display.vhd:65]
 INFO: [Synth 8-256] done synthesizing module 'master' (13#1) [C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.srcs/sources_1/new/master.vhd:37]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 357.754 ; gain = 121.055
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 357.840 ; gain = 120.941
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -309,7 +276,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 357.754 ; gain = 121.055
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 357.840 ; gain = 120.941
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -366,16 +333,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 664.207 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 663.113 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 664.207 ; gain = 427.508
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 663.113 ; gain = 426.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 664.207 ; gain = 427.508
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 663.113 ; gain = 426.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -387,21 +354,17 @@ Applied set_property DONT_TOUCH = true for Clock/clk_wiz_0. (constraint file  au
 Applied set_property DONT_TOUCH = true for VGA_Clock. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for VGA_Clock/clk_wiz_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 664.207 ; gain = 427.508
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 663.113 ; gain = 426.215
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:116]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:115]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:141]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:141]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:141]
-WARNING: [Synth 8-6014] Unused sequential element patternCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:77]
-WARNING: [Synth 8-6014] Unused sequential element patternDATA_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:78]
-WARNING: [Synth 8-327] inferring latch for variable 'nPATTERN_reg' [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:62]
-WARNING: [Synth 8-327] inferring latch for variable 'nCLK_reg' [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:62]
-WARNING: [Synth 8-327] inferring latch for variable 'v_DISPLAY_reg' [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:62]
-WARNING: [Synth 8-327] inferring latch for variable 'h_DISPLAY_reg' [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:62]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:118]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:117]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:143]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:143]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element patternCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element patternDATA_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:77]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 664.207 ; gain = 427.508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 663.113 ; gain = 426.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -414,27 +377,27 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 9     
+	   2 Input     32 Bit       Adders := 1     
 	   2 Input     31 Bit       Adders := 4     
 	   3 Input     14 Bit       Adders := 1     
 	   2 Input     13 Bit       Adders := 8     
-	   2 Input      4 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 8     
-	               12 Bit    Registers := 8     
-	                4 Bit    Registers := 14    
-	                1 Bit    Registers := 8     
+	               28 Bit    Registers := 1     
+	               12 Bit    Registers := 14    
+	                4 Bit    Registers := 11    
+	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 4     
-	   4 Input     28 Bit        Muxes := 1     
-	   4 Input     22 Bit        Muxes := 1     
+	   3 Input     28 Bit        Muxes := 1     
 	   2 Input     13 Bit        Muxes := 2     
-	   2 Input     12 Bit        Muxes := 15    
-	   4 Input     12 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 15    
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
+	   3 Input     12 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 16    
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -449,80 +412,63 @@ Detailed RTL Component Info :
 	   2 Input     31 Bit       Adders := 4     
 	   3 Input     14 Bit       Adders := 1     
 	   2 Input     13 Bit       Adders := 8     
-	   2 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
+	               28 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
 	                4 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 4     
-	   4 Input     28 Bit        Muxes := 1     
-	   4 Input     22 Bit        Muxes := 1     
+	   3 Input     28 Bit        Muxes := 1     
 	   2 Input     13 Bit        Muxes := 2     
+	   3 Input     12 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 5     
-	   4 Input     12 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 5     
 Module vga 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	               12 Bit    Registers := 2     
+	               12 Bit    Registers := 4     
 	                4 Bit    Registers := 3     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
 Module vga__parameterized1 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	               12 Bit    Registers := 2     
+	               12 Bit    Registers := 4     
 	                4 Bit    Registers := 3     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
 Module vga__parameterized3 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	               12 Bit    Registers := 2     
+	               12 Bit    Registers := 4     
 	                4 Bit    Registers := 3     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 1     
-Module vga__parameterized5 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-+---Registers : 
-	               32 Bit    Registers := 2     
-	               12 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
 Module display 
 Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 3     
-	   4 Input      4 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -538,127 +484,90 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element patternCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:77]
-WARNING: [Synth 8-6014] Unused sequential element patternDATA_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:78]
-WARNING: [Synth 8-6014] Unused sequential element pixelXCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:128]
-WARNING: [Synth 8-6014] Unused sequential element pixelXCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:128]
-WARNING: [Synth 8-6014] Unused sequential element pixelXCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:128]
-WARNING: [Synth 8-6014] Unused sequential element pixelXCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:128]
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[0]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[1]' (LD) to 'VGA_Pattern/nPATTERN_reg[2]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[2]' (LD) to 'VGA_Pattern/nPATTERN_reg[5]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[3]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[4]' (LD) to 'VGA_Pattern/nPATTERN_reg[19]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[5]' (LD) to 'VGA_Pattern/nPATTERN_reg[10]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[7]' (LD) to 'VGA_Pattern/nCLK_reg[21]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[8]' (LD) to 'VGA_Pattern/nPATTERN_reg[16]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[9]' (LD) to 'VGA_Pattern/nCLK_reg[9]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[13]' (LD) to 'VGA_Pattern/nCLK_reg[19]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[15]' (LD) to 'VGA_Pattern/nPATTERN_reg[16]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[16]' (LD) to 'VGA_Pattern/nCLK_reg[24]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[17]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[9]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[21]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[22]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[23]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[24]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[25]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[26]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[27]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[28]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[29]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[30]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[31]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[0]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[1]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[2]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[3]' (LD) to 'VGA_Pattern/nCLK_reg[4]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[4]' (LD) to 'VGA_Pattern/nCLK_reg[7]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[5]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[6]' (LD) to 'VGA_Pattern/nCLK_reg[24]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[8]' (LD) to 'VGA_Pattern/nCLK_reg[13]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (VGA_Pattern/\nCLK_reg[9] )
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[10]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[12]' (LD) to 'VGA_Pattern/nCLK_reg[14]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[14]' (LD) to 'VGA_Pattern/nCLK_reg[17]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[15]' (LD) to 'VGA_Pattern/nCLK_reg[19]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[16]' (LD) to 'VGA_Pattern/nCLK_reg[19]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[17]' (LD) to 'VGA_Pattern/nCLK_reg[22]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[18]' (LD) to 'VGA_Pattern/nCLK_reg[19]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[19]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[10]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[21]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[8]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[22]' (LD) to 'VGA_Pattern/nCLK_reg[25]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[23]' (LD) to 'VGA_Pattern/nCLK_reg[24]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[24]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[8]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[27]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[28]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[29]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[30]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[31]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[0]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[1]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[2]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[3]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[4]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[6]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[9]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[6]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[11]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[12]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[13]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[14]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[15]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[16]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[17]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[18]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[19]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[20]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[21]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[22]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[23]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[24]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[25]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[26]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[27]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[28]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[29]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[30]' (LD) to 'VGA_Pattern/h_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[31]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[0]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[1]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[2]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[3]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[4]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[5]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[7]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[11]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[12]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[13]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[14]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[15]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[16]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[17]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[18]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[19]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[20]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[21]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[22]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[23]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[24]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[25]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[26]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[27]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[28]' (LD) to 'VGA_Pattern/v_DISPLAY_reg[31]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (VGA_Pattern/\v_DISPLAY_reg[31] )
-WARNING: [Synth 8-3332] Sequential element (nCLK_reg[9]) is unused and will be removed from module pattern.
-WARNING: [Synth 8-3332] Sequential element (v_DISPLAY_reg[31]) is unused and will be removed from module pattern.
-WARNING: [Synth 8-3332] Sequential element (VGA640x480/intvgaG_reg[3]) is unused and will be removed from module display.
-WARNING: [Synth 8-3332] Sequential element (VGA640x480/intvgaG_reg[2]) is unused and will be removed from module display.
-WARNING: [Synth 8-3332] Sequential element (VGA640x480/intvgaG_reg[1]) is unused and will be removed from module display.
-WARNING: [Synth 8-3332] Sequential element (VGA640x480/intvgaG_reg[0]) is unused and will be removed from module display.
-WARNING: [Synth 8-3332] Sequential element (VGA640x480/intvgaB_reg[3]) is unused and will be removed from module display.
-WARNING: [Synth 8-3332] Sequential element (VGA640x480/intvgaB_reg[2]) is unused and will be removed from module display.
-WARNING: [Synth 8-3332] Sequential element (VGA640x480/intvgaB_reg[1]) is unused and will be removed from module display.
-WARNING: [Synth 8-3332] Sequential element (VGA640x480/intvgaB_reg[0]) is unused and will be removed from module display.
+WARNING: [Synth 8-6014] Unused sequential element patternCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element patternDATA_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/pattern.vhd:77]
+WARNING: [Synth 8-6014] Unused sequential element VGA_Display/VGA800x600/pixelXCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:141]
+WARNING: [Synth 8-6014] Unused sequential element VGA_Display/VGA1024x768/pixelXCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:141]
+WARNING: [Synth 8-6014] Unused sequential element VGA_Display/VGA1280x1024/pixelXCNT_reg was removed.  [C:/Users/local/Documents/GitHub/source/_vhdl/source/vga.vhd:141]
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[0]' (FDE) to 'VGA_Pattern/nCLK_reg[0]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[3]' (FDE) to 'VGA_Pattern/nCLK_reg[0]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[0]' (FDE) to 'VGA_Pattern/nCLK_reg[1]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[1]' (FDE) to 'VGA_Pattern/nCLK_reg[2]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[2]' (FDE) to 'VGA_Pattern/nCLK_reg[3]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[3]' (FDE) to 'VGA_Pattern/nCLK_reg[4]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[4]' (FDE) to 'VGA_Pattern/nCLK_reg[5]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[5]' (FDE) to 'VGA_Pattern/nCLK_reg[7]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[6]' (FDE) to 'VGA_Pattern/nCLK_reg[20]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[7]' (FDE) to 'VGA_Pattern/nCLK_reg[10]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[8]' (FDE) to 'VGA_Pattern/nCLK_reg[13]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[9]' (FDE) to 'VGA_Pattern/nCLK_reg[12]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[10]' (FDE) to 'VGA_Pattern/nCLK_reg[27]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[12]' (FDE) to 'VGA_Pattern/nCLK_reg[14]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[13]' (FDE) to 'VGA_Pattern/nCLK_reg[26]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[14]' (FDE) to 'VGA_Pattern/nCLK_reg[17]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[15]' (FDE) to 'VGA_Pattern/nCLK_reg[16]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[16]' (FDE) to 'VGA_Pattern/nCLK_reg[18]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[17]' (FDE) to 'VGA_Pattern/nCLK_reg[22]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[18]' (FDE) to 'VGA_Pattern/nCLK_reg[19]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[20]' (FDE) to 'VGA_Pattern/nCLK_reg[23]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[22]' (FDE) to 'VGA_Pattern/nCLK_reg[25]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[23]' (FDE) to 'VGA_Pattern/nCLK_reg[24]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\VGA_Pattern/nCLK_reg[25] )
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[27]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[0]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[0]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[1]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[2]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[2]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[3]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[3]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[4]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[4]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[6]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[5]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[9]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[6]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[7]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[7]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[11]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[11]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[0]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[0]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[1]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[1]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[2]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[2]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[5]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[3]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[4]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[4]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[6]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[5]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[7]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/v_DISPLAY_reg[7]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Pattern/v_DISPLAY_reg[11] )
+WARNING: [Synth 8-3332] Sequential element (VGA_Pattern/nCLK_reg[25]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Pattern/v_DISPLAY_reg[11]) is unused and will be removed from module master.
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[11]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[9]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[19]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[10]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[21]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[8]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[24]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[8]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nCLK_reg[26]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[10]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/h_DISPLAY_reg[9]' (FDE) to 'VGA_Pattern/v_DISPLAY_reg[6]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[1]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[8]'
+INFO: [Synth 8-3886] merging instance 'VGA_Pattern/nPATTERN_reg[2]' (FDE) to 'VGA_Pattern/h_DISPLAY_reg[10]'
+INFO: [Synth 8-3886] merging instance 'VGA_Display/VGA1024x768/pixelY_reg[10]' (FDCE) to 'VGA_Display/VGA1024x768/pixelY_reg[11]'
+INFO: [Synth 8-3886] merging instance 'VGA_Display/VGA800x600/pixelY_reg[10]' (FDCE) to 'VGA_Display/VGA800x600/pixelY_reg[11]'
+INFO: [Synth 8-3886] merging instance 'VGA_Display/VGA1280x1024/pixelY_reg[10]' (FDCE) to 'VGA_Display/VGA1280x1024/pixelY_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA1024x768/pixelY_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA800x600/pixelY_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA1280x1024/pixelY_reg[11] )
+INFO: [Synth 8-3886] merging instance 'VGA_Display/VGA1024x768/pixelX_reg[10]' (FDC) to 'VGA_Display/VGA1024x768/pixelX_reg[11]'
+INFO: [Synth 8-3886] merging instance 'VGA_Display/VGA800x600/pixelX_reg[10]' (FDC) to 'VGA_Display/VGA800x600/pixelX_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA1024x768/pixelX_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA800x600/pixelX_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA1280x1024/pixelX_reg[11] )
+INFO: [Synth 8-3886] merging instance 'VGA_Display/VGA1024x768/pixelYCNT_reg[10]' (FDE) to 'VGA_Display/VGA1024x768/pixelYCNT_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA1024x768/pixelYCNT_reg[11] )
+INFO: [Synth 8-3886] merging instance 'VGA_Display/VGA800x600/pixelYCNT_reg[10]' (FDE) to 'VGA_Display/VGA800x600/pixelYCNT_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA800x600/pixelYCNT_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA_Display/VGA1280x1024/pixelYCNT_reg[11] )
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA800x600/pixelYCNT_reg[11]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA800x600/pixelX_reg[11]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA800x600/pixelY_reg[11]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA1024x768/pixelYCNT_reg[11]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA1024x768/pixelX_reg[11]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA1024x768/pixelY_reg[11]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA1280x1024/pixelYCNT_reg[11]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA1280x1024/pixelX_reg[11]) is unused and will be removed from module master.
+WARNING: [Synth 8-3332] Sequential element (VGA_Display/VGA1280x1024/pixelY_reg[11]) is unused and will be removed from module master.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 664.207 ; gain = 427.508
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 663.113 ; gain = 426.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -671,13 +580,13 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'CLK'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 664.207 ; gain = 427.508
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 663.113 ; gain = 426.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 664.207 ; gain = 427.508
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 663.113 ; gain = 426.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -689,7 +598,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 664.789 ; gain = 428.090
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 666.008 ; gain = 429.109
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -713,7 +622,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 664.789 ; gain = 428.090
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 666.008 ; gain = 429.109
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -726,7 +635,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 664.789 ; gain = 428.090
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 666.008 ; gain = 429.109
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -738,25 +647,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 664.789 ; gain = 428.090
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 666.008 ; gain = 429.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 664.789 ; gain = 428.090
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 666.008 ; gain = 429.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 664.789 ; gain = 428.090
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 666.008 ; gain = 429.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 664.789 ; gain = 428.090
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 666.008 ; gain = 429.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -772,61 +681,58 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |BUFG       |     7|
-|2     |CARRY4     |   550|
-|3     |LUT1       |   322|
-|4     |LUT2       |  1045|
-|5     |LUT3       |   694|
-|6     |LUT4       |   636|
-|7     |LUT5       |   200|
-|8     |LUT6       |    66|
+|1     |BUFG       |     6|
+|2     |CARRY4     |   234|
+|3     |LUT1       |   103|
+|4     |LUT2       |   664|
+|5     |LUT3       |    78|
+|6     |LUT4       |   155|
+|7     |LUT5       |    71|
+|8     |LUT6       |   154|
 |9     |MMCME2_ADV |     2|
-|10    |XORCY      |    29|
-|11    |FDCE       |   448|
-|12    |FDRE       |     4|
-|13    |LD         |    15|
-|14    |IBUF       |    19|
-|15    |OBUF       |    16|
+|10    |XORCY      |    13|
+|11    |FDCE       |   147|
+|12    |FDRE       |    73|
+|13    |IBUF       |    19|
+|14    |OBUF       |    16|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+-----------------+-----------------------------+------+
 |      |Instance         |Module                       |Cells |
 +------+-----------------+-----------------------------+------+
-|1     |top              |                             |  4053|
+|1     |top              |                             |  1735|
 |2     |  Clock          |clock_bd                     |     5|
 |3     |    clk_wiz_0    |clock_bd_clk_wiz_0_0         |     5|
 |4     |      inst       |clock_bd_clk_wiz_0_0_clk_wiz |     5|
-|5     |  VGA_Clock      |vga_bd                       |     8|
-|6     |    clk_wiz_0    |vga_bd_clk_wiz_0_0           |     8|
-|7     |      inst       |vga_bd_clk_wiz_0_0_clk_wiz   |     8|
-|8     |  VGA_Display    |display                      |  2378|
-|9     |    VGA1024x768  |vga__parameterized3          |   547|
-|10    |    VGA1280x1024 |vga__parameterized5          |   731|
-|11    |    VGA640x480   |vga                          |   540|
-|12    |    VGA800x600   |vga__parameterized1          |   560|
-|13    |  VGA_Pattern    |pattern                      |  1614|
+|5     |  VGA_Clock      |vga_bd                       |     7|
+|6     |    clk_wiz_0    |vga_bd_clk_wiz_0_0           |     7|
+|7     |      inst       |vga_bd_clk_wiz_0_0_clk_wiz   |     7|
+|8     |  VGA_Display    |display                      |   676|
+|9     |    VGA1024x768  |vga__parameterized1          |   171|
+|10    |    VGA1280x1024 |vga__parameterized3          |   181|
+|11    |    VGA800x600   |vga                          |   315|
+|12    |  VGA_Pattern    |pattern                      |  1012|
 +------+-----------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 664.789 ; gain = 428.090
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 666.008 ; gain = 429.109
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 664.789 ; gain = 121.637
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 664.789 ; gain = 428.090
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 666.008 ; gain = 123.836
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 666.008 ; gain = 429.109
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 615 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 268 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance VGA_Clock/clk_wiz_0/inst/clkin1_ibufg. Found overlapping instances within the shape: Clock/clk_wiz_0/inst/clkin1_ibufg and VGA_Clock/clk_wiz_0/inst/clkin1_ibufg.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 44 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 29 instances
-  LD => LDCE: 15 instances
+  A total of 13 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 13 instances
 
-176 Infos, 24 Warnings, 1 Critical Warnings and 0 Errors encountered.
+136 Infos, 20 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 670.391 ; gain = 433.691
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 666.008 ; gain = 429.109
 INFO: [Common 17-1381] The checkpoint 'C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.runs/synth_1/master.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 670.391 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 25 11:36:20 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 666.008 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May  1 23:04:20 2017...

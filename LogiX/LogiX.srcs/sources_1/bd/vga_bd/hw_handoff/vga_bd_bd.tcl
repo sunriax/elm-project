@@ -158,9 +158,11 @@ proc create_root_design { parentCell } {
   set CLK [ create_bd_port -dir I -type clk CLK ]
   set CLK1024x768 [ create_bd_port -dir O -type clk CLK1024x768 ]
   set CLK1280x1024 [ create_bd_port -dir O -type clk CLK1280x1024 ]
-  set CLK640x480 [ create_bd_port -dir O -type clk CLK640x480 ]
   set CLK800x600 [ create_bd_port -dir O -type clk CLK800x600 ]
   set RESET [ create_bd_port -dir I -type rst RESET ]
+  set_property -dict [ list \
+CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] $RESET
   set notEN [ create_bd_port -dir I notEN ]
   set vgaLOCK [ create_bd_port -dir O vgaLOCK ]
 
@@ -170,18 +172,21 @@ proc create_root_design { parentCell } {
 CONFIG.CLKOUT1_JITTER {256.807} \
 CONFIG.CLKOUT1_PHASE_ERROR {408.086} \
 CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {108.000} \
+CONFIG.CLKOUT1_REQUESTED_PHASE {45.000} \
 CONFIG.CLKOUT2_JITTER {275.099} \
 CONFIG.CLKOUT2_PHASE_ERROR {408.086} \
 CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {65.000} \
+CONFIG.CLKOUT2_REQUESTED_PHASE {45.000} \
 CONFIG.CLKOUT2_USED {true} \
 CONFIG.CLKOUT3_JITTER {293.873} \
 CONFIG.CLKOUT3_PHASE_ERROR {408.086} \
 CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {40.000} \
+CONFIG.CLKOUT3_REQUESTED_PHASE {45.000} \
 CONFIG.CLKOUT3_USED {true} \
 CONFIG.CLKOUT4_JITTER {313.553} \
 CONFIG.CLKOUT4_PHASE_ERROR {408.086} \
 CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {25.175} \
-CONFIG.CLKOUT4_USED {true} \
+CONFIG.CLKOUT4_USED {false} \
 CONFIG.CLKOUT5_JITTER {193.459} \
 CONFIG.CLKOUT5_PHASE_ERROR {306.323} \
 CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {100.000} \
@@ -194,24 +199,32 @@ CONFIG.MMCM_CLKFBOUT_MULT_F {62.375} \
 CONFIG.MMCM_CLKOUT0_DIVIDE_F {9.625} \
 CONFIG.MMCM_CLKOUT1_DIVIDE {16} \
 CONFIG.MMCM_CLKOUT2_DIVIDE {26} \
-CONFIG.MMCM_CLKOUT3_DIVIDE {41} \
+CONFIG.MMCM_CLKOUT3_DIVIDE {1} \
 CONFIG.MMCM_CLKOUT4_DIVIDE {1} \
 CONFIG.MMCM_DIVCLK_DIVIDE {6} \
-CONFIG.NUM_OUT_CLKS {4} \
-CONFIG.RESET_PORT {resetn} \
-CONFIG.RESET_TYPE {ACTIVE_LOW} \
+CONFIG.NUM_OUT_CLKS {3} \
+CONFIG.RESET_PORT {reset} \
+CONFIG.RESET_TYPE {ACTIVE_HIGH} \
 CONFIG.USE_POWER_DOWN {true} \
  ] $clk_wiz_0
 
+  # Create instance: util_vector_logic_0, and set properties
+  set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 ]
+  set_property -dict [ list \
+CONFIG.C_OPERATION {not} \
+CONFIG.C_SIZE {1} \
+CONFIG.LOGO_FILE {data/sym_notgate.png} \
+ ] $util_vector_logic_0
+
   # Create port connections
+  connect_bd_net -net RESET_1 [get_bd_ports RESET] [get_bd_pins clk_wiz_0/reset]
   connect_bd_net -net clk_in1_1 [get_bd_ports CLK] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_CLK1024x768 [get_bd_ports CLK1024x768] [get_bd_pins clk_wiz_0/CLK1024x768]
   connect_bd_net -net clk_wiz_0_CLK1280x1024 [get_bd_ports CLK1280x1024] [get_bd_pins clk_wiz_0/CLK1280x1024]
-  connect_bd_net -net clk_wiz_0_CLK640x480 [get_bd_ports CLK640x480] [get_bd_pins clk_wiz_0/CLK640x480]
   connect_bd_net -net clk_wiz_0_CLK800x600 [get_bd_ports CLK800x600] [get_bd_pins clk_wiz_0/CLK800x600]
   connect_bd_net -net clk_wiz_0_locked [get_bd_ports vgaLOCK] [get_bd_pins clk_wiz_0/locked]
-  connect_bd_net -net power_down_1 [get_bd_ports notEN] [get_bd_pins clk_wiz_0/power_down]
-  connect_bd_net -net resetn_1 [get_bd_ports RESET] [get_bd_pins clk_wiz_0/resetn]
+  connect_bd_net -net notEN_1 [get_bd_ports notEN] [get_bd_pins util_vector_logic_0/Op1]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins clk_wiz_0/power_down] [get_bd_pins util_vector_logic_0/Res]
 
   # Create address segments
 

@@ -2,8 +2,8 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Tue Apr 25 11:35:30 2017
-# Process ID: 7320
+# Start of session at: Mon May  1 23:03:33 2017
+# Process ID: 7740
 # Current directory: C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.runs/synth_1
 # Command line: vivado.exe -log master.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source master.tcl
 # Log file: C:/Users/local/Documents/GitHub/elm-project/LogiX/LogiX.runs/synth_1/master.vds

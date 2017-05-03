@@ -1,0 +1,60 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port alarm_out -pg 1 -y 310 -defaultsOSRD
+preplace port vccaux_alarm_out -pg 1 -y 210 -defaultsOSRD
+preplace port dwe_in -pg 1 -y 170 -defaultsOSRD
+preplace port vauxp6 -pg 1 -y 250 -defaultsOSRD
+preplace port overtemp_alarm_out -pg 1 -y 230 -defaultsOSRD
+preplace port drdy_out -pg 1 -y 150 -defaultsOSRD -left
+preplace port vauxp7 -pg 1 -y 310 -defaultsOSRD
+preplace port usertemp_alarm_out -pg 1 -y 170 -defaultsOSRD
+preplace port vauxp14 -pg 1 -y 370 -defaultsOSRD
+preplace port busy_out -pg 1 -y 350 -defaultsOSRD
+preplace port RESET -pg 1 -y 470 -defaultsOSRD
+preplace port CLK -pg 1 -y 450 -defaultsOSRD
+preplace port vauxp15 -pg 1 -y 430 -defaultsOSRD
+preplace port vccbram_alarm_out -pg 1 -y 290 -defaultsOSRD
+preplace port vauxn6 -pg 1 -y 230 -defaultsOSRD
+preplace port vauxn14 -pg 1 -y 350 -defaultsOSRD
+preplace port vauxn15 -pg 1 -y 410 -defaultsOSRD
+preplace port vauxn7 -pg 1 -y 290 -defaultsOSRD
+preplace port eos_out -pg 1 -y 330 -defaultsOSRD
+preplace port den_in -pg 1 -y 90 -defaultsOSRD
+preplace port eoc_out -pg 1 -y 270 -defaultsOSRD
+preplace port vccint_alarm_out -pg 1 -y 190 -defaultsOSRD
+preplace portBus daddr_in -pg 1 -y 70 -defaultsOSRD
+preplace portBus channel_out -pg 1 -y 250 -defaultsOSRD
+preplace portBus di_in -pg 1 -y 110 -defaultsOSRD
+preplace portBus do_out -pg 1 -y 130 -defaultsOSRD -left
+preplace inst xadc_wiz_0 -pg 1 -lvl 1 -y 260 -defaultsOSRD
+preplace netloc vauxn15_1 1 0 1 NJ
+preplace netloc vauxp14_1 1 0 1 NJ
+preplace netloc vauxp7_1 1 0 1 NJ
+preplace netloc xadc_wiz_0_vbram_alarm_out 1 1 1 NJ
+preplace netloc di_in_1 1 0 1 NJ
+preplace netloc xadc_wiz_0_busy_out 1 1 1 NJ
+preplace netloc xadc_wiz_0_vccaux_alarm_out 1 1 1 NJ
+preplace netloc xadc_wiz_0_user_temp_alarm_out 1 1 1 NJ
+preplace netloc vauxp6_1 1 0 1 NJ
+preplace netloc xadc_wiz_0_eos_out 1 1 1 NJ
+preplace netloc xadc_wiz_0_ot_out 1 1 1 NJ
+preplace netloc den_in_1 1 0 1 NJ
+preplace netloc vauxp15_1 1 0 1 NJ
+preplace netloc xadc_wiz_0_vccint_alarm_out 1 1 1 NJ
+preplace netloc vauxn14_1 1 0 1 NJ
+preplace netloc xadc_wiz_0_alarm_out 1 1 1 NJ
+preplace netloc xadc_wiz_0_eoc_out 1 1 1 NJ
+preplace netloc reset_in_1 1 0 1 NJ
+preplace netloc daddr_in_1 1 0 1 NJ
+preplace netloc dclk_in_1 1 0 1 NJ
+preplace netloc dwe_in_1 1 0 1 NJ
+preplace netloc xadc_wiz_0_drdy_out 1 0 1 NJ
+preplace netloc vauxn6_1 1 0 1 NJ
+preplace netloc vauxn7_1 1 0 1 NJ
+preplace netloc xadc_wiz_0_channel_out 1 1 1 NJ
+preplace netloc xadc_wiz_0_do_out 1 0 1 NJ
+levelinfo -pg 1 0 170 340 -top 0 -bot 520
+",
+}
+0

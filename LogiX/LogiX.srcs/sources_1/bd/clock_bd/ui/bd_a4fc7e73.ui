@@ -1,18 +1,20 @@
 {
    guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port notEN -pg 1 -y 40 -defaultsOSRD
-preplace port CLK -pg 1 -y 20 -defaultsOSRD
-preplace port RESET -pg 1 -y 0 -defaultsOSRD
-preplace port sysLOCK -pg 1 -y 10 -defaultsOSRD
-preplace port sysCLK -pg 1 -y 30 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 20 -defaultsOSRD
-preplace netloc clk_wiz_0_locked 1 1 1 N
-preplace netloc clk_in1_1 1 0 1 N
-preplace netloc resetn_1 1 0 1 N
-preplace netloc power_down_1 1 0 1 N
-preplace netloc clk_wiz_0_sysCLK 1 1 1 N
-levelinfo -pg 1 -30 100 230 -top -50 -bot 120
+preplace port notEN -pg 1 -y 130 -defaultsOSRD
+preplace port CLK -pg 1 -y 70 -defaultsOSRD
+preplace port RESET -pg 1 -y 50 -defaultsOSRD
+preplace port sysLOCK -pg 1 -y 80 -defaultsOSRD
+preplace port sysCLK -pg 1 -y 60 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -y 130 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 70 -defaultsOSRD
+preplace netloc clk_wiz_0_locked 1 2 1 NJ
+preplace netloc notEN_1 1 0 1 NJ
+preplace netloc clk_in1_1 1 0 2 NJ 70 NJ
+preplace netloc util_vector_logic_0_Res 1 1 1 320J
+preplace netloc RESET_1 1 0 2 NJ 50 NJ
+preplace netloc clk_wiz_0_sysCLK 1 2 1 NJ
+levelinfo -pg 1 0 170 430 560 -top 0 -bot 190
 ",
 }
-
+0
